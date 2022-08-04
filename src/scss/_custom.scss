@@ -38,12 +38,12 @@
     flex: 1;
   }
   .date{
-    font-size:var(--fSizeXXS);
+    font-size:var(--fSize);
     color:var(--font-color02);
     margin-bottom:8px;
   }
   .list-title{
-    font-size:var(--fSizeS);
+    font-size:var(--fSize);
     margin:10px 0 15px 0;
     a{
       display:inline-block;
@@ -176,7 +176,7 @@
     padding:8px 0 8px 0;
   }
   li{
-    font-size:var(--fSizeSS);
+    font-size:var(--fSize);
     position:relative;
     @include english;
     // &:before{
@@ -205,7 +205,7 @@
   @include flex-wrap($wrap:wrap);
   row-gap:22px;
   li{
-    font-size:var(--fSizeXXS);
+    font-size:var(--fSize);
     @include english;
     
     a{
@@ -249,7 +249,7 @@
     width:100%;
   }
   .date{
-    font-size:var(--fSizeXXS);
+    font-size:var(--fSize);
     color:var(--font-color02);
     margin-bottom:30px;
     @include media(sp){
@@ -276,7 +276,7 @@
     border-bottom:1px solid var(--border-color01);
     li{
       // margin-bottom:8px;
-      font-size:var(--fSizeS);
+      font-size:var(--fSize);
       @include english;
       // padding:7px 0 ;
       // display:table;
@@ -287,7 +287,7 @@
       }
     }
     .agenda{
-      font-size:var(--fSizeS);
+      font-size:var(--fSize);
       @include english($weight: bold);
       display:block;
       // width:120px;
@@ -309,7 +309,7 @@
     }
   }
   .detail-link{
-    font-size:var(--fSizeSS);
+    font-size:var(--fSize);
     margin:30px auto 0 auto;
     width:60%;
   }

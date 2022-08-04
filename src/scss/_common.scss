@@ -10,6 +10,10 @@
 $icoGnav:'/common/img/sprite_gNav01.png';
 $icoSprite01:'/common/img/sprite_ico01.png';
 :root {
+
+  // テーマカラー
+  --thema-color01: #ffe404;
+
   // フォントカラー
   --font-color01: #333333;//
   --font-color02: #808080;//
@@ -18,19 +22,16 @@ $icoSprite01:'/common/img/sprite_ico01.png';
   --font-color05:#656565;//list-tit a のカラー
 
   // 背景カラー
-  --bg-color:#F8F8F8;//背景
-  --bg-color01: #f7f7f7;//
+  --bg-color01:#f6f5ed;//背景
   --bg-color02: #333333;//
   --bg-color03: #fff;//
-  --bg-color04: #e7e7e7;//
+  --bg-color04: #e7e7e7;
   --bg-color05: #F5F5F5;
-  --bg-color06: #535353;//チェックボックスオーバー
-  --bg-color07: #f3f3f3;//リンク背景
-  --bg-color08: #cacaca;//遅延読み込みの画像背景
+  --bg-color06: #535353;
+  --bg-color07: #f3f3f3;
+  --bg-color08: #cacaca;
 
-  // ベースカラー
-  --base-color01: #fff;
-  --base-color02: #333333;
+
 
   // ボーダーカラー
   --border-color01: #eaeaea;//サイドバーのライン
@@ -38,8 +39,7 @@ $icoSprite01:'/common/img/sprite_ico01.png';
   --border-color03: #d8d8d8;//タイトル下のライン　フッターのライン
   --border-color04: #fff;//スマホメニュー検索結果 メニューライン
 
-  // テーマカラー
-  --thema-color01: #333333;
+
 
   // ポイントカラー
   --point-color01: #333333;
@@ -49,22 +49,33 @@ $icoSprite01:'/common/img/sprite_ico01.png';
   --link-color02: #f3f3f3;//リンク背景
   --link-color03: #333333;//
   // フォントサイズ
-  --fSizeXXXS: calc((8* 0.1) * 1rem);//
-  --fSizeXXS: calc((10* 0.1) * 1rem);//
-  --fSizeXS: calc((11* 0.1) * 1rem);
-  --fSizeSS: calc((12* 0.1) * 1rem);//
-  --fSizeS: calc((14* 0.1) * 1rem);
-  --fSize: calc((16* 0.1) * 1rem);//
-  --fSizeR: calc((18* 0.1) * 1rem);
-  --fSizeM: calc((20* 0.1) * 1rem);
-  --fSizeL: calc((22* 0.1) * 1rem);
-  --fSizeLL: calc((24* 0.1) * 1rem);
-  --fSizeXL: calc((28* 0.1) * 1rem);//
-  --Enfont: calc((30* 0.1) * 1rem);//
+  --fSize-7: calc((9* 0.1) * 1rem);
+  --fSize-6: calc((10* 0.1) * 1rem);
+  --fSize-5: calc((11* 0.1) * 1rem);
+  --fSize-4: calc((12* 0.1) * 1rem);
+  --fSize-3: calc((13* 0.1) * 1rem);
+  --fSize-2: calc((14* 0.1) * 1rem);
+  --fSize-1: calc((15* 0.1) * 1rem);
+  --fSize: calc((16* 0.1) * 1rem);
+  --fSize1: calc((17* 0.1) * 1rem);
+  --fSize2: calc((18* 0.1) * 1rem);
+  --fSize3: calc((19* 0.1) * 1rem);
+  --fSize4: calc((20* 0.1) * 1rem);
+  --fSize5: calc((21* 0.1) * 1rem);
+  --fSize6: calc((22* 0.1) * 1rem);
+  --fSize7: calc((23* 0.1) * 1rem);
+  --fSize8: calc((24* 0.1) * 1rem);
+  --fSize9: calc((25* 0.1) * 1rem);
+  --fSize10: calc((26* 0.1) * 1rem);
+  --fSize11: calc((27* 0.1) * 1rem);
+  --fSize12: calc((28* 0.1) * 1rem);
+  --fSize13: calc((29* 0.1) * 1rem);
+  --fSize14: calc((30* 0.1) * 1rem);
+  --Enfont: calc((30* 0.1) * 1rem);
   --EnfontS: calc((32* 0.1) * 1rem);
   --EnfontR: calc((34* 0.1) * 1rem);
   --EnfontL: calc((36* 0.1) * 1rem);
-  --EnfontXL: calc((40* 0.1) * 1rem);//
+  --EnfontXL: calc((40* 0.1) * 1rem);
   --MVfont: calc((60* 0.1) * 1rem);
   --font404: calc((180* 0.1) * 1rem);
 
@@ -75,7 +86,8 @@ $icoSprite01:'/common/img/sprite_ico01.png';
   --cn-width:calc(1340 / 1440 * 100%);
   --cn-sp-width:90%;
   // ヘッダー
-  --header-height:70px;
+  --header-height:180px;
+  --header-height-scroll:120px;
 
   //サイド
   --asW: 425px;
@@ -87,11 +99,9 @@ $icoSprite01:'/common/img/sprite_ico01.png';
   --spaceLL: 50px;
   --spaceXL: 60px;//
   --spaceContent: 120px;//
-  --spaceContentSP: 40px;//
-  --nav-lang-width:78px; //
-  --nav-gnav-width:78px; //
-  --nav-width:30px; //
-  --logo-width:182px;//
+  --spaceContentSP: 40px;///
+  --nav-width:120px; //
+  --logo-width:130px;//
   --sp-nav-lang-width:60px; //
   --sp-nav-gnav-width:60px; //
 }
@@ -101,26 +111,6 @@ $icoSprite01:'/common/img/sprite_ico01.png';
 //　==================================================
 //　フォント
 //　==================================================
-
-// フォントサイズのバリエーション
-$fSizeXXXXS: 10;
-$fSizeXXXS: 11;
-$fSizeXXS: 12;
-$fSizeXS: 13;
-$fSizeSS:14;
-$fSizeS:15;
-$fSize:16;
-$fSizeR:17;
-$fSizeM:18;
-$fSizeL:19;
-$fSizeLL:20;
-$fSizeXL:21;
-$EnfSizeR:20;
-$EnfSizeM:22;
-$EnfSizeL:25;
-$EnfSizeLl:30;
-$EnfSizeLL:35;
-$EnfSizeLLL:40;
 
 // 英語フォントのバリエーション
 @mixin english($weight: 300){
@@ -135,53 +125,6 @@ $EnfSizeLLL:40;
   font-size: ($size * 0.1) * 1rem;
 }
 
-//　==================================================
-//　色
-//　==================================================
-// ベースカラー
-$baseColor01: #fff;
-$baseColor02: #333333;
-$baseColor03: #454545; //ボタンボーダー
-$baseColor04: #626262; //タグカラー　タイトル左
-$baseColor05: #cfcfcf; //タイトル右
-$baseColor06: #dbdbdb;//区切り線
-$baseColor07: #565656;//区切り線メニュー
-$baseColor08: #f7f7f7;//背景ありのテキスト
-$baseColor09: #292a2a;
-$baseColor10: #f6f6f6;
-
-// テーマカラー
-$themaColor01: #FFF159;
-$themaColor02: #FFE400; //サイドメニュー
-
-// ポイントカラー
-$pointColor01: #ff0000; //Ftimeロゴカラー
-$pointColor02: #7e9bb0; //暗い水色　イベントタグ　
-$pointColor03: #cda779; //暗い黄色　キャンペーンタグ
-$pointColor04: #e4b71b; //暗い黄色02
-$pointColor05: #425563; //暗い紺
-$pointColor06: #00bd8c; //グリーン
-
-$fontColor01: #333333;//通常フォント
-$fontColor02: #6b6b6b;//タグ　日付等
-
-
-
-//　==================================================
-//　幅
-//　==================================================
-// コンテンツ幅
-$cnW: 1440px;
-// コンテンツ幅2
-$cniW: 975px;
-// サイド幅
-$asW: 975px;
-// スペース
-$spaceS: 10px;
-$spaceR: 20px;
-$spaceM: 30px;
-$spaceL: 60px;
-$spaceLL: 120px;
 
 //　==================================================
 //　メディアクエリ設定

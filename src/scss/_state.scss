@@ -11,45 +11,31 @@
 
 .is-view{
 	overflow-y:hidden;
-	main{
-		filter: blur(2px);
-	}
-	.nav-inner{
-		visibility:visible;
-		opacity:1;
-		// @include transition($property: all, $time: 2.6s, $timing: cubic-bezier(0, 0.48, 0.12, 0.99));
-	}
 	.l-gnav{
 		visibility:visible;
 		opacity:1;
-		// z-index:1;
-		@include transition($property: all, $time: 0.8s, $timing: 0.3s ease-in-out);
+		z-index:9997;
+		height:100vh;
+		// top:var(--header-height);
+		@include transition($property: all, $time: 0.8s, $timing: 0s ease-in-out);
 	}
-	.gnav-botton-box{
-		@include transition($property: all, $time: 0.4s, $timing: 0.0s ease-in-out);
-		@include rotate($origin: center center, $property: 180deg) ;
-	}
-	.gnav-botton-inner{
-		&:nth-of-type(1){
-			.gnav-line{
-				@include transition($property: all, $time: 0.4s, $timing: 0.0s ease-in-out);
-				background:var(--bg-color02);
-			}
+	.gnav-line{
+		@include transition($property: all, $time: 0.2s, $timing: 0s ease-in-out);
+		&:nth-child(2){
+			display:none;
+		}		
+		&:nth-child(1){
+			@include rotate($origin: center center, $property: 45deg);
+			top:1px;
 		}
-		&:nth-of-type(2){
-			&:before,&:after{
-				@include transition($property: all, $time: 0.4s, $timing: 0.0s ease-in-out);
-				background:var(--bg-color02);
-			}
-		}
-		&:nth-of-type(3){
-			.gnav-line{
-				@include transition($property: all, $time: 0.4s, $timing: 0.0s ease-in-out);
-				background:var(--bg-color02);
-			}
+		&:nth-child(3){
+			@include rotate($origin: center center, $property: -45deg);
+			top:0px;
 		}
 	}
 }
+
+
 .is-load{
 	.spin{
 		display:block !important;
@@ -168,23 +154,6 @@
 /* ------------------------------------------------
 	language
 ------------------------------------------------ */
-.is-lang{
-	font-weight:bold;
-	position:relative;
-	&:before{
-		position:absolute;
-		content:'';
-		display:inline-block;
-		background:var(--border-color02);
-		// border:1px solid var(--border-color02);
-		height:1px;
-		width:14px;
-		bottom:-2px;
-		#en & {
-			width:17px;
-		}
-	}
-}
 
 
 .delay-load {

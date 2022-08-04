@@ -71,13 +71,14 @@ const cssSass = () => {
    .pipe(postcss([mqpacker()])) // メディアクエリを圧縮
    .pipe(postcss([cssnext(browsers)]))//cssnext
    .pipe(sourcemaps.write('/maps'))  //ソースマップの出力
-   .pipe(cleanCSS()) // CSS圧縮
-   .pipe(
-     rename({
-       extname: '.min.css' //.min.cssの拡張子にする
-     })
-     )
    .pipe(dest(destPath.css))  //コンパイル先
+   .pipe(cleanCSS()) // CSS圧縮
+   // .pipe(
+   //   rename({
+   //     extname: '.min.css' //.min.cssの拡張子にする
+   //   })
+   //   )
+   // .pipe(dest(destPath.css))  //コンパイル先
 }
 
 
@@ -165,7 +166,7 @@ const browserSyncFunc = () => {
  browserSync.init(browserSyncOption);
 }
 const browserSyncOption = {
- proxy: 'http://soundlog/',       //環境によって変更する
+ proxy: 'http://denci-shoten/',       //環境によって変更する
  open: true,
  reloadOnRestart: true,
 }

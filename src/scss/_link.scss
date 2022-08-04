@@ -51,6 +51,12 @@
 /* ------------------------------------------------
 	ベース設定
 ------------------------------------------------ */
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
 a {
 	text-decoration: none;
 	//マウスオーバーの設定
@@ -72,7 +78,6 @@ a {
 		// color:$fontColor01;
 	}
 	&:visited {
-		color:$fontColor01;
 	}
 }
 

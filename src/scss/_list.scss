@@ -23,7 +23,7 @@
 			display: block;
 			width: 4px;
 			height: 4px;
-			background-color: $baseColor06;
+			// background-color: $baseColor06;
 			position: absolute;
 			top: 7px;
 			left: 2px;
@@ -36,7 +36,7 @@
 .ulBasic {
 	width:100%;
 	margin-top:3px;
-	border-top:solid 1px $baseColor03;
+	// border-top:solid 1px $baseColor03;
 	li {
 		position: relative;
 		margin:0 0 10px 15px;
@@ -87,15 +87,15 @@
 	li {
 		white-space: nowrap;
 		display: inline-block;
-		padding: $spaceS* 0.5 $spaceS 0 0;
+		padding: 10px* 0.5 10px 0 0;
 		@include media(spS){
 			white-space: normal;
-			padding: $spaceS 0 0;
+			padding: 10px 0 0;
 			display: block;
 		}
 		&:after {
 			content: '/';
-			padding-left: $spaceS;
+			padding-left: 10px;
 			@include media(spS){
 				display: none;
 			}
@@ -109,7 +109,7 @@
 .ulCaution01 {
 	padding-left: 1em;
 	&.small {
-		@include fz($fSizeS);
+		// @include fz($fSizeS);
 	}
 	li {
 		text-align: left;

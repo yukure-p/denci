@@ -45,7 +45,7 @@ if (is_front_page()){
 
   wp_enqueue_style(
     '',
-    get_template_directory_uri() . '/css/style.min.css',
+    get_template_directory_uri() . '/css/style.css',
     array(),
   );
 }

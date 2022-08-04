@@ -11,7 +11,7 @@
 html {
 	font-size: 62.5%;
 }
-body#jp {
+body {
 	/*font size自動調整をきる*/
 	-webkit-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
@@ -19,33 +19,13 @@ body#jp {
 	-o-text-size-adjust: 100%;
 	text-size-adjust: 100%;
 	font-family: 'dnp-shuei-gothic-kin-std', sans-serif,'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka;
-	@include fz($fSize);
 	line-height: 1.6;
-	color: $fontColor01;
 	letter-spacing: 0.1em;
 
 	@include media(spS){
-		@include fz($fSizeS);
 	}
 }
 
-body#en {
-	/*font size自動調整をきる*/
-	-webkit-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-	-o-text-size-adjust: 100%;
-	text-size-adjust: 100%;
-	@include english;
-	@include fz($fSize);
-	line-height: 1.6;
-	color: $fontColor01;
-	letter-spacing: 0.1em;
-
-	@include media(spS){
-		@include fz($fSizeS);
-	}
-}
 
 .en {
 	font-family:'Nimbus Sans';
