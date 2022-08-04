@@ -1,0 +1,20 @@
+{
+	/*"folders":
+	[
+		{
+			"path": "/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes"
+		}
+	]*/
+	/*"folders":
+	[
+		{
+			"path": "."
+		}
+	],*/
+	"folders":
+	[
+		{
+			"path": "src",
+		}
+	],
+}

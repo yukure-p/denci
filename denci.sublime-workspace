@@ -1,0 +1,637 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cons",
+				"console.log"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"end",
+				"endDelay"
+			],
+			[
+				"in",
+				"infinite"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"fo",
+				"foreach"
+			],
+			[
+				"c",
+				"classList"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"nth",
+				"nth-of-type"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"no",
+				"normal"
+			],
+			[
+				"si",
+				"similar"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"f",
+				"flex-start"
+			],
+			[
+				"remove",
+				"remove_theme_support"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"cu",
+				"column-gap"
+			],
+			[
+				"a",
+				"align-self"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"al",
+				"align-self"
+			],
+			[
+				"j",
+				"justify-content"
+			],
+			[
+				"wi",
+				"window"
+			],
+			[
+				"e",
+				"else"
+			],
+			[
+				"match",
+				"matches"
+			],
+			[
+				"re",
+				"result-num"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"ge",
+				"genre"
+			],
+			[
+				"se",
+				"searchform"
+			],
+			[
+				"app",
+				"appendChild"
+			],
+			[
+				"g",
+				"genre"
+			],
+			[
+				"ob",
+				"object"
+			],
+			[
+				"ar",
+				"archives"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"fle",
+				"flex-direction"
+			],
+			[
+				"l-l",
+				"l-list"
+			],
+			[
+				"jus",
+				"justify-content"
+			],
+			[
+				"gr",
+				"grid-column"
+			],
+			[
+				"grid",
+				"grid-row"
+			],
+			[
+				"s",
+				"static"
+			],
+			[
+				"im",
+				"import"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"get_the",
+				"get_the_date"
+			],
+			[
+				"l",
+				"line-height"
+			],
+			[
+				"cul",
+				"column-gap"
+			],
+			[
+				"p",
+				"padding-right"
+			],
+			[
+				"mna",
+				"margin-top"
+			],
+			[
+				"i",
+				"inline"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"col",
+				"column-gap"
+			],
+			[
+				"get_template_",
+				"get_template_directory"
+			],
+			[
+				"get_",
+				"get_template"
+			],
+			[
+				"the",
+				"the_post"
+			],
+			[
+				"add",
+				"add_action"
+			],
+			[
+				"fu",
+				"function_exists()"
+			],
+			[
+				"he",
+				"header"
+			],
+			[
+				"bu",
+				"blur(5px)"
+			],
+			[
+				"fi",
+				"filter"
+			],
+			[
+				"b",
+				"blur"
+			],
+			[
+				"is",
+				"is-visible"
+			],
+			[
+				"grid-te",
+				"grid-template-rows"
+			],
+			[
+				"di",
+				"display:inline-block"
+			],
+			[
+				"hea",
+				"header"
+			],
+			[
+				"t",
+				"transform"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"las",
+				"last-child"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"plu",
+				"plugins"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"list ",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/wolf/WebSites/denci-shoten/htdocs/wp-content/themes/src",
+		"/Users/wolf/WebSites/denci-shoten/htdocs/wp-content/themes/src/js"
+	],
+	"file_history":
+	[
+		"/Users/wolf/WebSites/denci-shoten/htdocs/wp-content/themes/src/scss/_module.scss",
+		"/Users/wolf/WebSites/denci-shoten/htdocs/wp-content/themes/src/scss/_layout.scss",
+		"/Users/wolf/WebSites/denci-shoten/htdocs/wp-content/themes/src/scss/_base.scss",
+		"/Users/wolf/WebSites/denci-shoten/htdocs/wp-content/themes/src/scss/_link.scss",
+		"/Users/wolf/WebSites/denci-shoten/htdocs/wp-content/themes/src/scss/_font.scss",
+		"/Users/wolf/WebSites/denci-shoten/htdocs/wp-content/themes/src/scss/_common.scss",
+		"/Users/wolf/WebSites/denci-shoten/htdocs/wp-content/themes/src/scss/_list_ol.scss",
+		"/Users/wolf/WebSites/denci-shoten/htdocs/wp-content/themes/src/scss/_list_dl.scss",
+		"/Users/wolf/WebSites/denci-shoten/htdocs/wp-content/themes/src/scss/_layout_list.scss",
+		"/Users/wolf/WebSites/denci-shoten/htdocs/wp-content/themes/src/scss/_list.scss",
+		"/Users/wolf/WebSites/denci-shoten/htdocs/wp-content/themes/src/scss/_txt.scss",
+		"/Users/wolf/WebSites/denci-shoten/htdocs/wp-content/themes/src/scss/_pattern.scss",
+		"/Users/wolf/WebSites/denci-shoten/htdocs/wp-content/themes/src/scss/_layout_flex.scss",
+		"/Users/wolf/WebSites/denci-shoten/htdocs/wp-content/themes/gulpfile.js",
+		"/opt/homebrew/etc/httpd/httpd.conf",
+		"/private/etc/hosts",
+		"/opt/homebrew/etc/httpd/extra/httpd-vhosts.conf",
+		"/opt/homebrew/etc/httpd/users/wolf.conf",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/search.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/index.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/scss/_custom.scss",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/scss/_layout.scss",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/single-music.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/single.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/archive.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/gulpfile.js",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/functions.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/custom/css/style.min.css",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/package.json",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/package-lock.json",
+		"/Users/wolf/WebSites/kahen/gulpfile.js",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/scss/_common.scss",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/js/entry.js",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/front-page.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/header.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/footer.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/scss/_font.scss",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/scss/_state.scss",
+		"/Users/wolf/Documents/project/kahen/website/gulpfile.js",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/custom/css/style.css",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/js/entry1.js",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-config.php",
+		"/Users/wolf/Desktop/wp-config.php",
+		"/Users/wolf/Desktop/htaccess",
+		"/Users/wolf/Downloads/wp-config.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/js/async.js",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/plugins/custom-related-posts/helpers/output.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/taxonomy-type.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/taxonomy-genre.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/js/asyncs.js",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/scss/_txt.scss",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/inc/nav.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/js/common.js",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/src/404.php",
+		"/Users/wolf/Documents/project/soundlog/wp/wp-content/themes/src/single-music.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/custom/functions.php",
+		"/Users/wolf/Documents/web関係/aswell/style.css",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/custom/style.css",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/twentytwentyone/style.css",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/style.css",
+		"/Users/wolf/WebSites/soundlog/htdocs/.htaccess",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/scss/_txt.scss",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/archive-en.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/footer.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/scss/_custom.scss",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/inc/similar.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/single-music.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/js/common.js",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/scss/_layout.scss",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/plugins/custom-related-posts/helpers/output.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/plugins/custom-related-posts/index.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/header.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/taxonomy-genre-en.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/taxonomy-type-en.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-admin/network/admin.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/.htaccess",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/functions.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-config.php",
+		"/Users/wolf/Documents/web関係/wordpress/wordpress/wp-content/themes/twentytwenty/style.css",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp-content/themes/index.php",
+		"/Users/wolf/WebSites/soundlog/log/soundlog.com-error_log",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/debug.log",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/single-music-en.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/front-page-en.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/js/async.js",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/inc/nav.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/scss/_base.scss",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/scss/_link.scss",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/scss/_state.scss",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/scss/_common.scss",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/search.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/taxonomy-genre.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/taxonomy-type.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/single.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/inc/navsp.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/inc/parts/searchform.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/front-page.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/index.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/archive.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/inc/loop-top.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/search-single.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/js/asyncs.js",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-admin/.htaccess",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-admin/admin-ajax.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-includes/rewrite.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/inc/sidebar.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/archive-music.php",
+		"/Users/wolf/.Trash/ごみ 16.27.54/searchform.php",
+		"/Users/wolf/.Trash/search.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/customのコピー/ごみ/sidebar_kotori.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/customのコピー/search.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/customのコピー/ごみ/searchform.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/customのコピー/ごみ/custom-search.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/customのコピー/ごみ/search-.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/custom/footer.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/custom/functions.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/custom/inc/parts/searchform.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/custom/js/ajax.js",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/custom/header.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/custom/inc/navsp.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/inc/parts/searchformsp.php",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/custom/search.php",
+		"/Users/wolf/WebSites/kahen.sublime-project",
+		"/Users/wolf/WebSites/kahen/README.md",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/customのコピー/js/ajax.js",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/src/js/entry.js",
+		"/Users/wolf/WebSites/soundlog/htdocs/wp/wp-content/themes/gulpfile.js",
+		"/Users/wolf/WebSites/kahen/src/js/common.js"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 98.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"$spaceS",
+			"mv-txt01",
+			"mvtxt",
+			"Infinity",
+			"iterations:1,",
+			";",
+			"ease",
+			"      0% {\n        opacity:0;\n        top: 60px;\n      }\n      20% {\n        opacity:1;\n        top: 0;\n      }\n      80% {\n        top: 0;\n        opacity:1;\n      }\n      100% {\n        top: -60px;\n        opacity:0;\n        display:none;\n      }",
+			"      0% {\n        opacity:0;\n        top: 80px;\n      }\n      20% {\n        opacity:1;\n        top: 0;\n      }\n      80% {\n        top: 0;\n        opacity:1;\n      }\n      100% {\n        top: -80px;\n        opacity:0;\n        display:none;\n      }",
+			"keyframes",
+			"quicksand",
+			"position",
+			"Position",
+			"position",
+			"Position",
+			"position",
+			"Position",
+			"position",
+			"Position",
+			"position",
+			"search",
+			"pあいうえお"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 120.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 120.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "denci.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/WebSites/soundlog/htdocs/wp/wp-content/themes/soundlog.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 233.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
