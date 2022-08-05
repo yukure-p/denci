@@ -23,18 +23,21 @@
 	font-size:var(--fSize10);
 }
 
+
 .tit-01{
 	@include flexbox;
 	@include flex-justify-content($justify:center);
 	font-size:var(--fSize12);
 	position:relative;
+	letter-spacing:.3em;
+	text-indent: .3em;
 	&:before{
 		content:'';
 		top:52px;
 		background:var(--thema-color01);
 		height:16px;
 		width:60px;
-		border-radius:5px;
+		border-radius:3px;
 		position:absolute;
 	}
 	span{
@@ -51,7 +54,7 @@
 			background: url("/wp-content/themes/custom/img/common/tit01.svg");
 			width:32px;
 			height:32px;
-			left:-5;
+			left:-2px;
 			top:-22px;
 		}
 		&:after{
@@ -59,8 +62,8 @@
 			background: url("/wp-content/themes/custom/img/common/tit02.svg");
 			width:32px;
 			height:32px;
-			left:5px;
-			top:-16px;
+			left:0;
+			top:-20px;
 		}
 
 	}
