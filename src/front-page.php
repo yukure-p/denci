@@ -40,27 +40,113 @@
     </div>
 
 
-    <div class="l-container">
-      <article>
-        <div class="l-contents" id="result">
-          <?php get_template_part( 'search' ); ?>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   <section>
+      <div class="l-container">
+         <h1 class="tit-01"><span>PICK UP</span></h1>
+         <div class="l-contents">
+            <ul class="contents-list flexList01">
+               <li class="box-content">
+                  <div class="box-item">
+                     <div class="date">
+                        <time datetime="">2022.08.30</time>
+                     </div>
+                     <div class="box-img">
+                        <a href="" class="linkBl01">
+                        <img src="<?php echo get_template_directory_uri()?>/img/kiasmos.jpg" alt="電子商店OPEN GUIDE" width="38" >
+                        </a>
+                     </div>
+                     <div class="box-txt">
+                        <h1 class="box-tit">
+                        <a href="" class="link03">タイトルタイトルタイトルタイトルタイトル</a>
+                        </h1>
+
+                     </div>
+                  </div>
+               </li>
+               <li class="box-content">
+                  <div class="box-item">
+                     <div class="date">
+                        <time datetime="">2022.08.30</time>
+                     </div>
+                     <div class="box-img">
+                        <a href="" class="linkBl01">
+                        <img src="<?php echo get_template_directory_uri()?>/img/kiasmos.jpg" alt="電子商店OPEN GUIDE" width="38" >
+                        </a>
+                     </div>
+                     <div class="box-txt">
+                        <h1 class="box-tit">
+                        <a href="" class="link03">タイトルタイトルタイトルタイトルタイトル</a>
+                        </h1>
+
+                     </div>
+                  </div>
+               </li>
+               <li class="box-content">
+                  <div class="box-item">
+                     <div class="date">
+                        <time datetime="">2022.08.30</time>
+                     </div>
+                     <div class="box-img">
+                        <a href="" class="linkBl01">
+                        <img src="<?php echo get_template_directory_uri()?>/img/kiasmos.jpg" alt="電子商店OPEN GUIDE" width="38" >
+                        </a>
+                     </div>
+                     <div class="box-txt">
+                        <h1 class="box-tit">
+                        <a href="" class="link03">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</a>
+                        </h1>
+
+                     </div>
+                  </div>
+               </li>
+               <li class="box-content">
+                  <div class="box-item">
+                     <div class="date">
+                        <time datetime="">2022.08.30</time>
+                     </div>
+                     <div class="box-img">
+                        <a href="" class="linkBl01">
+                        <img src="<?php echo get_template_directory_uri()?>/img/kiasmos.jpg" alt="電子商店OPEN GUIDE" width="38" >
+                        </a>
+                     </div>
+                     <div class="box-txt">
+                        <h1 class="box-tit">
+                        <a href="" class="link03">タイトルタイトルタイトルタイトルタイトル</a>
+                        </h1>
+                        
+                     </div>
+                  </div>
+               </li>
+            </ul>
+        
+
+
         </div>
-      </article>
-    </div>
+      </div>
+     </section>
+
   </div>
   <!-- /.l-frame -->
+
+
+
+  <div class="l-frame-outer bg-w">
+    <div class="l-frame">
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+  </div>
+
+
+
+
+
 </main>
 <?php get_footer(); ?>
 

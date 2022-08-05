@@ -61,11 +61,12 @@
 	.box-flexListシリーズここから
 ------------------------------------------------ */
 
-.box-flexList01 {
+.flexList01 {
 	@include flexbox;
-	@include flex-direction;
-	@include flex-wrap;
-	@include flex-justify-content;
+	@include flex-direction($direction:row);
+	// @include flex-wrap;
+	@include flex-justify-content($justify:space-between);
+	column-gap:40px;
 	&>.box-content {
 		@include box-sizing;
 		width: 25%;

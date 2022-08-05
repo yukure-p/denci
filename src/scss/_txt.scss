@@ -22,3 +22,47 @@
 .nav-title{
 	font-size:var(--fSize10);
 }
+
+.tit-01{
+	@include flexbox;
+	@include flex-justify-content($justify:center);
+	font-size:var(--fSize12);
+	position:relative;
+	&:before{
+		content:'';
+		top:52px;
+		background:var(--thema-color01);
+		height:16px;
+		width:60px;
+		border-radius:5px;
+		position:absolute;
+	}
+	span{
+		&:before,&:after{
+			content:'';
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			position:relative;
+			display:inline-block;
+		}
+		&:before{
+			content:'';
+			background: url("/wp-content/themes/custom/img/common/tit01.svg");
+			width:32px;
+			height:32px;
+			left:-5;
+			top:-22px;
+		}
+		&:after{
+			content:'';
+			background: url("/wp-content/themes/custom/img/common/tit02.svg");
+			width:32px;
+			height:32px;
+			left:5px;
+			top:-16px;
+		}
+
+	}
+
+}
