@@ -1,15 +1,40 @@
 <?php get_header(); ?>
 <main>
+
   <div class="l-frame">
     <div class="l-entry">
-      <!-- <div class="mvtype"></div> -->
+      
       <div class="mv-box">
 
-        <p>Hello!</p>
-        <p>I'm DJ SOUNDLOG</p>
-        <p>I don't DJ MIX</p>
-        <p>And play DJ</p>
-        <p>Just select the music</p>
+        <div class="mv-inner-l">
+          <div class="mv-img-box01">
+            <div><img src="<?php echo get_template_directory_uri()?>/img/top/mv-ico01.svg" alt="電子商店OPEN GUIDE" width="38" ></div>
+            <div><img src="<?php echo get_template_directory_uri()?>/img/top/mv-ico01.svg" alt="電子商店OPEN GUIDE" width="38" ></div>
+            <div><img src="<?php echo get_template_directory_uri()?>/img/top/mv-ico01.svg" alt="電子商店OPEN GUIDE" width="38" ></div>
+          </div>
+          <div class="mv-img-box01">
+            <div><img src="<?php echo get_template_directory_uri()?>/img/top/mv-ico01.svg" alt="電子商店OPEN GUIDE" width="38" ></div>
+            <div><img src="<?php echo get_template_directory_uri()?>/img/top/mv-ico01.svg" alt="電子商店OPEN GUIDE" width="38" ></div>
+            <div><img src="<?php echo get_template_directory_uri()?>/img/top/mv-ico01.svg" alt="電子商店OPEN GUIDE" width="38" ></div>
+          </div>
+          <div class="mv-img-box01">
+            <div><img src="<?php echo get_template_directory_uri()?>/img/top/mv-ico01.svg" alt="電子商店OPEN GUIDE" width="38" ></div>
+            <div><img src="<?php echo get_template_directory_uri()?>/img/top/mv-ico01.svg" alt="電子商店OPEN GUIDE" width="38" ></div>
+            <div><img src="<?php echo get_template_directory_uri()?>/img/top/mv-ico01.svg" alt="電子商店OPEN GUIDE" width="38" ></div>
+          </div>
+          
+        </div>
+
+        <div class="mv-inner-c">
+          <div class="c-img"><img src="<?php echo get_template_directory_uri()?>/img/top/mv01.svg" alt="電子商店OPEN GUIDE" width="200" ></div>
+          <div class="c-txt">
+            <img src="<?php echo get_template_directory_uri()?>/img/top/txt.svg" alt="電子商店OPEN GUIDE" width="600" >
+          </div>
+        </div>
+
+
+        <div class="mv-inner-r">3</div>
+
       </div>
      
     </div>

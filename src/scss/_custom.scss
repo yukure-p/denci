@@ -57,85 +57,51 @@
 }
 
 
-.mvtype{
-  font-size:var(--MVfont);
-  @include english($weight: bold);
-  &:after{
-    content:'|';
-    position:relative;
-    left:10px;
-    font-weight:normal;
-    @include animation(mvtype .8s ease 0s infinite normal);
-    @include keyframes(mvtype){
-      0% {
-        opacity: 0;
-      }
-      50%{
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
-    }
-  }
-  @include media(sp){
-    font-size:clamp(26px, 1vw, 30px);
-  }
-}
 
-.mvimg{
-  // position: relative;
-  // z-index: -1;
-  // top: 36px;
-  @include media(sp){
-    img{
-      margin:0 auto;
-      width:80%;
-      height:100%;
-    }
-  }
-}
+
 
 .mv-box{
-  font-size:var(--MVfont);
-  @include english($weight: bold);
-  // @include animation($property);
-  display:flex;
-  // @include flex-justify-content($justify:center);
+  display:grid;
+  grid-template-columns:1fr 50% 1fr;  
+  width:100%;  
+  column-gap:60px;     
+}
+.mv-inner-c{
+  @include flexbox;
+  @include flex-justify-content($justify:space-between);
   @include flex-align($align: center);
-  @include flex-direction($direction:column);
-  width:100%;
-  position:relative;
-  height:66px;
-  // border:1px solid #333;
-  overflow:hidden;
-  p{
-    position:absolute;
-    opacity: 0;
-    top:35px;
-  }
-  .mv-txt-from{
-    @include animation(mvtxt01 2s cubic-bezier(0, 0.58, 0.25, 1) 0s 1 normal);
-    @include keyframes(mvtxt01) {
-      0% {
-        opacity:0;
-        top: 35px;
-      }
-      20% {
-        opacity:1;
-        top: -18px;
-      }
-      80% {
-        top: -18px;
-        opacity:1;
-      }
-      100% {
-        top: -50px;
-        opacity:0;
-        display:none;
-      }
+  column-gap:40px;
+  .c-img{
+    img{
+      max-width: 100%;
+      height: auto;
     }
-  }         
+  }
+  .c-txt{
+    img{
+      max-width: 100%;
+      height:auto;
+    }
+  }
+}
+
+.mv-inner-l{
+    @include flexbox;
+    @include flex-direction($direction:column);
+    // @include flex-justify-content($justify:space-between);
+    // @include flex-align($align: center);
+    .mv-img-box01{
+      @include flexbox;
+      @include flex-justify-content($justify:space-between);
+      @include flex-align($align: center);
+      
+    }
+  div{
+    img{
+      max-width: 100%;
+      height:auto;
+    }
+  }
 }
 
 .mvanimation{

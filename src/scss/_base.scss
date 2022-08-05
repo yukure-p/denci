@@ -27,6 +27,7 @@ body {
 
 	width:100%;
 	max-width:2400px;
+	background:var(--bg-color01);
 	&:before{
 		content: '';
 	    position: fixed;

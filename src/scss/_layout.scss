@@ -242,6 +242,18 @@
 /* ------------------------------------------------
 	l-grid l-frame
 ------------------------------------------------ */
+.l-frame{
+	margin:0 auto var(--spaceContent) auto;
+	// max-width:var(--cn-max-width);
+	position:relative;
+	width:var(--cn-width);
+	@include media(sp){
+		margin:0 auto var(--spaceXL) auto;
+		width:var(--cn-sp-width);
+	}
+}
+
+
 
 .l-entry{
 	.l-top & {
@@ -261,16 +273,7 @@
 }
 
 
-.l-frame{
-	margin:0 auto var(--spaceContent) auto;
-	// max-width:var(--cn-max-width);
-	position:relative;
-	width:var(--cn-width);
-	@include media(sp){
-		margin:0 auto var(--spaceXL) auto;
-		width:var(--cn-sp-width);
-	}
-}
+
 
 .l-contents{
 	width:100%;
@@ -406,7 +409,7 @@
 	// width:var(--cn-width);
 	// margin:var(--spaceXL) auto var(--spaceS) auto;
 	background:var( --thema-color01);
-	padding:30px 0;
+	padding-top:30px;
 	@include media(sp){
 		margin:var(--spaceR) auto;
 		width:100%;
@@ -419,24 +422,26 @@
 	width:var(--cn-width);
 	margin:60px auto 0 auto;
 	@include flexbox;
-	// @include flex-direction($direction:column);
 	@include flex-justify-content($justify:space-between);
-	// @include flex-align($align: center);
 	@include flex-align($align: start);
 }
 
+.f-logo-outer{
+	@include flexbox;
+	@include flex-direction($direction:row);
+	@include flex-justify-content($justify:space-between);
+	@include flex-align($align: end);
+}
+
 .footer-logo{
-	flex-grow: 2;
-	width:60%;
+	width:30%;
 
 	@include media(sp){
 		margin-bottom:20px;
 	}
 	.f-logo{
-		// font-size:var(--Enfont);
-		// line-height:1;
 		img{
-			width:130px;
+			width:170px;
 		}
 		
 		@include media(sp){
@@ -446,24 +451,44 @@
 			
 		}
 	}
-	.f-txt{
-		font-size:var(--fSize-4);
-		font-weight:normal;
-		margin-top:20px;
-		@include media(sp){
-			margin-top:20px;
-		}
 
+}
+
+.f-link-sns{
+		@include flexbox;
+		@include flex-direction($direction:row);
+		@include flex-justify-content($justify:center);
+		column-gap:15px;
+	li{
+		width:36px;
+		height:36px;
+		img{
+			width:16px;
+			height:16px;
+		}
+	}
+}
+
+.f-txt{
+	font-size:var(--fSize-4);
+	font-weight:normal;
+	margin-top:20px;
+	border-top:1px solid var(--border-color01);
+	width:100%;
+	padding-top:20px;
+	@include media(sp){
+		margin-top:20px;
 	}
 
 }
+
 
 .footer-link-box{
 	width:40%;
 	@include flexbox;
 	@include flex-justify-content($justify:space-between);
 	@include flex-align($align: start);
-	column-gap:30px;
+	column-gap:40px;
 }
 
 .footer-link{
@@ -477,6 +502,9 @@
 	}
 	.f-tit{
 		font-size:var(--fSize-2);
+		border-bottom:1px solid var(--border-color01);
+		padding-bottom:10px;
+		margin-bottom:20px;
 	}
 	.f-link{
 		@include flexbox;
@@ -485,7 +513,7 @@
 
 		li{
 			font-size:var(--fSize-2);
-			margin-right:15px;
+			// margin-left:10px;
 			&:last-child{
 				margin-right:0px;
 			}
@@ -494,11 +522,12 @@
 }
 
 .copy{
-	font-size:var(--fSize);
-	margin-top:40px;
-    display: flex;
-    justify-content: end;
-    @include flex-justify-content($justify:end);
+	width:var(--cn-width);
+	margin:60px auto 0 auto;
+	font-size:var(--fSize-4);
+	@include flexbox;
+    @include flex-justify-content($justify:flex-end);
+    padding-bottom:15px;
 }
 /* ------------------------------------------------
 	パンクズ
