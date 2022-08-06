@@ -134,11 +134,11 @@
 
       <div class="tab-box l-frame">
          <ul class="tab-group">
-            <li class="tab tab-A is-active">
+            <li class="tab tab-A tab-border is-active">
                <img src="<?php echo get_template_directory_uri()?>/img/top/tab01.svg" alt="開設前に知っておくこと" width="55" >
                <span>開設前に知っておくこと</span>
             </li>
-            <li class="tab tab-B">
+            <li class="tab tab-border tab-B">
                <img src="<?php echo get_template_directory_uri()?>/img/top/tab02.svg" alt="ASPカートサービスについて" width="32" >
                <span>ASPカートサービスについて</span>
             </li>
@@ -146,7 +146,7 @@
       </div>
 
 
-      <div class="l-frame-outer bg-w">
+      <div class="l-frame-outer bg-w border01">
          <div class="l-frame">
             <div class="tab-box-inner">
               <div class="panel-group">
@@ -306,17 +306,35 @@
                 </div>
               </div>
             </div>
-
-
-
-
          </div>
       </div>
 
    </section>
 
 
-
+   <section>
+      <div class="l-frame">
+         <div class="l-container">
+            <h1 class="tit-01"><span>タグから探す</span> </h1>
+         </div>
+         <div class="l-contents">
+            <ul class="tag-box">
+               <li class="">#タグ</li>
+               <li class="">#タグ</li>
+               <li class="">#タグ</li>
+               <li class="">#タグ</li>
+               <li class="">#タグタグ</li>
+               <li class="">#タグタグ</li>
+               <li class="">#タグタグ</li>
+               <li class="">#タグタグ</li>
+               <li class="">#タグタグ</li>
+               <li class="">#タグタグ</li>
+               <li class="">#タグタグ</li>
+               
+            </ul>
+         </div>
+      </div>
+   </section>
 
 </main>
 <?php get_footer(); ?>
