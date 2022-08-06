@@ -72,7 +72,7 @@ $icoSprite01:'/common/img/sprite_ico01.png';
   --fSize12: calc((28* 0.1) * 1rem);
   --fSize13: calc((29* 0.1) * 1rem);
   --fSize14: calc((30* 0.1) * 1rem);
-  --Enfont: calc((30* 0.1) * 1rem);
+  --font-entry: calc((34* 0.1) * 1rem);//記事ページ見出し
   --EnfontS: calc((32* 0.1) * 1rem);
   --EnfontR: calc((34* 0.1) * 1rem);
   --EnfontL: calc((36* 0.1) * 1rem);
@@ -83,6 +83,7 @@ $icoSprite01:'/common/img/sprite_ico01.png';
 
   // コンテンツ幅
   --cn-max-width: 1440px;
+  --local-max-width: 1240px;
   --cniW: 975px;
   --cn-width:calc(1340 / 1440 * 100%);
   --cn-sp-width:90%;

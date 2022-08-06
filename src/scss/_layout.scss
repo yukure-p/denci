@@ -124,20 +124,6 @@
 /* ------------------------------------------------
    ナビゲーション
 ------------------------------------------------ */
-// .nav-inner{
-// 	position:fixed;
-// 	width:100vw;
-// 	height:100vh;
-// 	background:rgba(0,0,0,0.6);
-// 	visibility:hidden;
-// 	opacity:0;
-// 	inset: 0;
-// 	z-index:1;
-// 	margin: auto;
-// 	@include transition($property: all, $time: 0.4s, $timing: cubic-bezier(0, 0.92, 0.43, 1.01));
-// }
-
-
 
 .l-gnav{
 	position:fixed;
@@ -251,6 +237,9 @@
 		margin:0 auto var(--spaceXL) auto;
 		width:var(--cn-sp-width);
 	}
+	.l-local & {
+		max-width:var(--local-max-width);
+	}
 }
 
 .l-frame-outer{
@@ -261,9 +250,6 @@
 		width:var(--cn-sp-width);
 	}
 }
-
-
-
 
 .l-entry{
 	.l-top & {
@@ -280,10 +266,28 @@
     }
     margin: 20px auto 0px auto;
     width:100%;
+    .l-local & {
+    	width: 100%;
+    	@include flexbox;
+		@include flex-justify-content($justify:center);
+		@include flex-direction($direction:column);
+		margin-bottom:80px;
+    }
+}
+
+.l-entry-inner {
+	width:80%;
+	max-width:calc(var(--local-max-width)*0.8);
+	@include flex-self($align: center);
+	margin-top:80px;
 }
 
 .l-container{
 	width:100%;
+	.l-local & {
+		@include flexbox;
+		@include flex-justify-content($justify:center);
+	}
 }
 
 
@@ -309,19 +313,7 @@
 		grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
 		grid-template-rows: auto;
 		column-gap:40px;
-		row-gap:80px;
-		@include media(sp){
-			grid-template-columns: repeat(auto-fill, minmax(45%,1fr));
-			column-gap:25px;
-		}
-	}
-	.l-list {
-		display:grid;
-		justify-content:center;
-		grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
-		grid-template-rows: auto;
-		column-gap:40px;
-		row-gap:80px;
+		row-gap:60px;
 		@include media(sp){
 			grid-template-columns: repeat(auto-fill, minmax(45%,1fr));
 			column-gap:25px;
@@ -329,78 +321,43 @@
 	}
 
 	.l-local & {
+		max-width:880px;
+		width:100%;
+		background:var(--bg-color03);
+		padding-bottom:80px;
 		margin-top:0;
-		margin-bottom:120px;
 		&:last-child{
 			margin-bottom:0;
-		}
-		.detail-content{
-			display:grid;
-			justify-content:center;
-			grid-template-columns: 30% 1fr;
-			grid-template-rows: auto;
-			column-gap:60px;
-			@include media(tablet){
-				// grid-template-columns: 300px 1fr;
-				column-gap:30px;
-			}
-			@include media(sp){
-				grid-template-columns:auto;
-			}
-			.detail-box{
-				grid-row: 1 ;
-				grid-column: 2 / 3 ;
-				@include media(sp){
-					grid-row: 2/3 ;
-					grid-column: 1 / 2 ;
-				}
-			}
-			.detail-aside{
-				grid-row: 1 ;
-				grid-column: 1 / 2 ;
-				@include media(sp){
-					grid-row: 1/2 ;
-					grid-column: 1 / 2 ;
-					margin-bottom:40px;
-				}
-			}
 		}
 	}
 	@include media(sp){
 		margin-top:var(--spaceContentSP);
-	}
-}
-
-
-
-
-.contents-list{
-	.box-item{
-		@include flexbox;
-	    @include flex-direction($direction:column);
-
-	}
-	.date{
-		margin-bottom:10px;
-		font-size:var(--fSize-6);
-		color:var(--font-color02);
-	}
-	.box-img{
-		img{
-			width:100%;
-			height:auto;
-		}
-	}
-	.box-txt{
-		margin-top:20px;
-		.box-tit{
-			font-size:var(--fSize2);
-			letter-spacing: .3rem;
-		}
 
 	}
 }
 
+
+
+
+.l-section{
+	width:100%;
+	max-width:var(--local-max-width);
+	@include flexbox;
+	@include flex-justify-content($justify:center);
+	// @include flex-direction($direction:row);
+	column-gap:40px;
+
+}
+
+.l-aside{
+	width:320px;
+	// background:#ffe4c4;
+	@include sticky;
+	top:200px;
+	height:auto;
+	background:var(--bg-color03);
+	font-size:var(--fSize);
+}
 
 
 /* ------------------------------------------------
@@ -410,7 +367,7 @@
 
 
 /* ------------------------------------------------
-	l-grid l-footer
+	l-footer
 ------------------------------------------------ */
 
 .l-footer{
@@ -549,16 +506,16 @@
 	@include flex-align($align: start);
 	li{
 		color:var(--font-color02);
-		font-size:var(--fSize);
+		font-size:var(--fSize-5);
 		a{
-			color:var(--font-color02);
+			// color:var(--font-color02);
 		}
 		&:after{
 			position:relative;
 			display:inline-block;
 			content:'/';
 			margin:0 5px;
-			color:var(--font-color02);
+			// color:var(--font-color02);
 		}
 		&:last-child{
 			&:after{

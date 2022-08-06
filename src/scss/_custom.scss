@@ -316,114 +316,39 @@
   記事ページここから
 ------------------------------------------------ */
 
-.detail-aside{
-  .detail-box-inner{
-    @include sticky;
-    top:120px;
-  }
-
-  .detail-info{
-    margin-top:20px;
-    margin-bottom:10px;
-    border-bottom:1px solid var(--border-color01);
-    li{
-      // margin-bottom:8px;
-      font-size:var(--fSize);
-      @include english;
-      // padding:7px 0 ;
-      // display:table;
+.c-box{
+  letter-spacing: .5em;
+    font-feature-settings: "palt";
+    padding:0 2rem;
+    margin-top:60px;
+    img{
       width:100%;
-      margin-bottom:10px;
-      &:nth-child(odd){
-        background:var(--bg-color01);
-      }
     }
-    .agenda{
-      font-size:var(--fSize);
-      @include english($weight: bold);
-      display:block;
-      // width:120px;
-      position:relative;
-      // display:table-cell;
-      // vertical-align: middle;
-      // &:after{
-      //   content:'-';
-      //   display:inline-block;
-      //   position:absolute;
-      //   left:84px;
-      //   top:50%;
-      //   @include translate ($x:0, $y:-54%);
-      //   font-size:var(--fSizeS);
-      //   font-weight:normal;
-      //   color:var(--font-color02);
-      //   margin:0 10px;
-      // }
-    }
-  }
-  .detail-link{
-    font-size:var(--fSize);
-    margin:30px auto 0 auto;
-    width:60%;
+}
+.entry-img{
+  img{
+    width:100%;
   }
 }
 
-.content-movie {
-  margin-bottom:30px;
-
+.l-aside-inner{
+  padding:0 2rem 6rem 2rem;
 }
 
-.movie{
-  position: relative;
-  padding-bottom: 56.25%; /* アスペクト比16:9の場合 */
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden;
-  // margin-bottom: 2rem; /* YouTubeの下に余白をつける */
-  border:1px solid var(--font-color01);
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding:10px;
-    @include box-sizing;
-  }
-}
-.detain-innerbox{
-  margin-bottom:40px;
-  &:last-child{
-    margin-bottom:0;
+.l-entry-inner{
+  .date{
+    margin-top:20px;
   }
 }
 
-/* ------------------------------------------------
-  記事ページ 同じアーティストの曲
------------------------------------------------- */
-.detail-box-same{
-  margin-top:80px;
-}
-.detail-box-contents{
 
-  width:100%;
-  display:grid;
-  justify-content:center;
-  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
-  grid-template-rows: auto;
-  column-gap:30px;
-  row-gap:40px;
-  margin-top:40px;
-  @include media(sp){
-    grid-template-columns: repeat(auto-fill, minmax(45%,1fr));
-    column-gap:25px;
-    margin-top:var(--spaceL);
-  }
-  @include media(spMS){
-    grid-template-columns: 1fr;
-    // column-gap:25px;
-    margin-top:var(--spaceL);
-  }
-}
+
+
+
+
+
+
+
 
 /* ------------------------------------------------
   記事ページ 似た曲の表示設定

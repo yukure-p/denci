@@ -175,6 +175,64 @@ function create_post_type_music() {
 
 
 
+//カスタム投稿日本語
+add_action( 'init', 'create_post_type_open_guide' );
+function create_post_type_open_guide() {
+  register_post_type( 'open_guide', // post-type
+    array(
+      'labels' => array(
+      'name' => __( 'open_guide' ),
+      'add_new' => _x('新規追加', 'open_guide'),
+      'add_new_item' => __('open_guideを追加'),
+      'singular_name' => __( 'open_guide' )
+      ),
+      'public' => true,
+      'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields' ,'comments' ),
+      'menu_position' =>200,
+      'show_in_rest' => true,
+      'has_archive' => true,
+      'with_front' => true,
+      // 'rewrite' => array( 'with_front' => false ),
+      // 'rest_base' => 'open_guide',
+    )
+  );
+  //カスタムタクソノミー、カテゴリタイプ*
+  register_taxonomy(
+    'before',
+    'open_guide',
+    array(
+      'hierarchical' => true,
+      'update_count_callback' => '_update_post_term_count',
+      'label' => '開設前に知っっておくこと',
+      'singular_label' => '開設前に知っっておくこと',
+      'public' => true,
+      'show_ui' => true,
+      'show_admin_column' => true,
+      // 'rewrite' => false,
+      // 'rewrite' => array( 'slug' => 'open_guide' ), //変更後のスラッグ
+    )
+  );
+  //カスタムタクソノミー、タグタイプ*
+  register_taxonomy(
+    'asp',
+    'open_guide',
+    array(
+      'hierarchical' => true,
+      'update_count_callback' => '_update_post_term_count',
+      'label' => 'ASPサービスについて',
+      'singular_label' => 'ASPサービスについて',
+      'public' => true,
+      'show_ui' => true,
+      'show_admin_column' => true,
+      // 'rewrite' => false,
+      // 'rewrite' => array( 'slug' => 'open_guide' ), //変更後のスラッグ
+    )
+  );         
+}
+
+
+
+
 
 
 function yukury_block_setup(){
