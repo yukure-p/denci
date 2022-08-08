@@ -628,14 +628,8 @@ footer {
   width: 100%;
 }
 .l-local .l-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-bottom: 100px;
 }
-
 .l-contents {
   width: 100%;
   margin-top: 100px;
@@ -651,13 +645,6 @@ footer {
      -moz-column-gap: 40px;
           column-gap: 40px;
   row-gap: 60px;
-}
-.l-local .l-contents {
-  max-width: 880px;
-  width: 100%;
-  background: #fff;
-  padding-bottom: 80px;
-  margin-top: 0;
 }
 .l-local .l-contents:last-child {
   margin-bottom: 0;
@@ -675,6 +662,7 @@ footer {
   -webkit-column-gap: 40px;
      -moz-column-gap: 40px;
           column-gap: 40px;
+  margin-bottom: 160px;
 }
 
 .l-aside {
@@ -685,6 +673,7 @@ footer {
   background: #fff;
   font-size: 16px;
   font-size: 1.6rem;
+  border-radius: 6px;
 }
 
 /* ------------------------------------------------
@@ -1121,7 +1110,7 @@ footer {
   top: 52px;
   background: #ffe404;
   height: 16px;
-  width: 60px;
+  width: 40px;
   border-radius: 3px;
   position: absolute;
 }
@@ -1197,6 +1186,7 @@ footer {
   border-top: 2px solid #ffe404;
   border-bottom: 2px solid #ffe404;
   padding: 0.7em 0;
+  text-indent: 0.8em;
 }
 
 .c-tit03 {
@@ -1767,6 +1757,22 @@ footer {
           justify-content: flex-start;
 }
 
+.box-item .box-img img {
+  width: 100%;
+}
+.box-item .date {
+  margin-bottom: 10px;
+  font-size: 10px;
+  font-size: 1rem;
+}
+.box-item .box-txt {
+  margin-top: 20px;
+}
+.box-item .box-txt .box-tit {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
 /* ------------------------------------------------
   一覧ページここから
 ------------------------------------------------ */
@@ -1792,6 +1798,16 @@ footer {
 /* ------------------------------------------------
   記事ページここから
 ------------------------------------------------ */
+.contents-box {
+  max-width: 880px;
+  width: 100%;
+  background: #fff;
+  padding-bottom: 80px;
+  margin-top: 0;
+  border-radius: 0 0 6px 6px;
+  background: #fff;
+}
+
 .c-box {
   letter-spacing: 0.5em;
   -webkit-font-feature-settings: "palt";
@@ -1806,11 +1822,68 @@ footer {
 
 .entry-img img {
   width: 100%;
+  border-radius: 6px 6px 0 0;
 }
 
 .l-aside-inner {
   padding: 0 20px 60px 20px;
   padding: 0 2rem 6rem 2rem;
+}
+
+.aside-tit {
+  font-size: 20px;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #ffe404;
+  padding: 0.5em 0;
+  border-radius: 6px 6px 0 0;
+}
+.aside-tit:before {
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  position: relative;
+  background: url("/wp-content/themes/custom/img/common/icon01.svg");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  left: -10px;
+  top: 4px;
+}
+
+.l-aside-menu {
+  margin-top: 20px;
+}
+.l-aside-menu li {
+  margin-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+.l-aside-menu li:last-child {
+  margin-bottom: 0;
+}
+.l-aside-menu li a {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  padding: 0.5em 0 0.5em 0.5em;
+  border-radius: 6px;
+}
+.l-aside-menu .l-aside-menu-under {
+  margin-left: 1em;
+  margin-bottom: 10px;
+}
+.l-aside-menu .l-aside-menu-under li {
+  font-weight: normal;
+  margin-bottom: 0px;
 }
 
 .l-entry-inner .date {
@@ -1968,8 +2041,13 @@ footer {
 }
 
 /* ------------------------------------------------
-	サイドメニュー
+	サイドメニュー 目次
 ------------------------------------------------ */
+.index a.active {
+  color: #333333;
+  background-color: #f3f3f3;
+}
+
 /* ------------------------------------------------
 	language
 ------------------------------------------------ */

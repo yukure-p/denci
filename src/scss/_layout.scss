@@ -285,8 +285,10 @@
 .l-container{
 	width:100%;
 	.l-local & {
-		@include flexbox;
-		@include flex-justify-content($justify:center);
+		margin-bottom:100px;
+		&:last-child{
+			// margin-bottom:0;
+		}
 	}
 }
 
@@ -321,11 +323,7 @@
 	}
 
 	.l-local & {
-		max-width:880px;
-		width:100%;
-		background:var(--bg-color03);
-		padding-bottom:80px;
-		margin-top:0;
+
 		&:last-child{
 			margin-bottom:0;
 		}
@@ -346,6 +344,7 @@
 	@include flex-justify-content($justify:center);
 	// @include flex-direction($direction:row);
 	column-gap:40px;
+	margin-bottom:160px;
 
 }
 
@@ -357,6 +356,7 @@
 	height:auto;
 	background:var(--bg-color03);
 	font-size:var(--fSize);
+	border-radius:6px;
 }
 
 

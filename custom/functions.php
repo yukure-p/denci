@@ -22,7 +22,7 @@ function sound_enqueue_scripts(){
 
 
 if (is_front_page()){
-        $scriptPath = '/js/entry.min.js';
+        // $scriptPath = '/js/entry.min.js';
     }
 
     wp_enqueue_script(
@@ -379,58 +379,9 @@ add_filter( 'manage_posts_columns', 'add_posts_columns_postid' );
 add_action( 'manage_posts_custom_column', 'add_posts_columns_postid_row', 10, 2 );
 
 
-// function sample_function(){
-// if (!check_ajax_referer( 'my_nonce' )){
-// wp_die();
-// }
-//   $genre = $_POST['genre'];
-//   $type = $_POST['type'];
-
-//     die();
-
-// }
-// // //ログインしているユーザー向け関数
-// add_action( 'wp_ajax_sample_function', 'ajax_func' );
-// //非ログインユーザー用関数
-// add_action( 'wp_ajax_nopriv_sample_function', 'ajax_func' );
-
-// function my_ajax_search(){
-//     // 「ad_url.ajax_url」のようにしてURLを指定できるようになる
-
-//   wp_enqueue_script(
-//    'script-ajax', 
-//    get_template_directory_uri().'/js/async.min.js', 
-//    array(), 
-//    null, 
-//    true );
-
-//     wp_localize_script( 'script-ajax', 'async',array( 
-//       'url' => admin_url( 'admin-ajax.php')
-//       ));
-// }
-// add_action( 'wp_enqueue_scripts', 'my_ajax_search' );
-
-
-// function music_post_type_link( $link, $post ){
-//   if ( $post->post_type === 'music' ) {
-//     return home_url( '/music/' . $post->ID );
-//   } else {
-//     return $link;
-//   }
-// }
-// add_filter( 'post_type_link', 'music_post_type_link', 1, 2 );
-
-// function music_rewrite_rules_array( $rules ) {
-//   $new_rewrite_rules = array( 
-//     'music/([0-9]+)/?$' => 'index.php?post_type=music&p=$matches[1]',
-//   );
-//   return $new_rewrite_rules + $rules;
-// }
-// add_filter( 'rewrite_rules_array', 'music_rewrite_rules_array' );
 
 
 
 
-//非ログインユーザー用関数
-define( 'BLOG_ID_JP', 1 );
-define( 'BLOG_ID_EN', 2 );
+
+

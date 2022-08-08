@@ -275,6 +275,26 @@
   }
 }
 
+.box-item{
+ 
+  .box-img{
+    img{
+      width:100%;
+    }
+  }
+  .date{
+    margin-bottom:10px;
+    font-size:var(--fSize-6);
+  }
+  .box-txt{
+    margin-top:20px;
+    .box-tit{
+      font-size:var(--fSize);
+    }
+  }
+}
+
+
 
 /* ------------------------------------------------
   一覧ページここから
@@ -316,6 +336,16 @@
   記事ページここから
 ------------------------------------------------ */
 
+.contents-box{
+  max-width:880px;
+  width:100%;
+  background:var(--bg-color03);
+  padding-bottom:80px;
+  margin-top:0;
+  border-radius: 0 0 6px 6px;
+  background:var(--bg-color03);
+}
+
 .c-box{
   letter-spacing: .5em;
     font-feature-settings: "palt";
@@ -328,11 +358,63 @@
 .entry-img{
   img{
     width:100%;
+    border-radius: 6px 6px 0 0;
   }
 }
 
 .l-aside-inner{
   padding:0 2rem 6rem 2rem;
+
+}
+
+.aside-tit{
+  font-size:var(--fSize4); 
+  @include flexbox;
+  @include flex-justify-content($justify:center);
+  background:var(--thema-color01);
+  padding:.5em 0;
+  border-radius:6px 6px 0 0;
+    &:before{
+      content:'';
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      display:inline-block;
+      position:relative;
+      background: url("/wp-content/themes/custom/img/common/icon01.svg");
+      background-repeat: no-repeat;
+      width:32px;
+      height:32px;
+      left:-10px;
+      top:4px;
+    }
+}
+
+.l-aside-menu{
+  margin-top:20px;
+  li{
+    margin-bottom:10px;
+    font-weight:bold;
+    letter-spacing:.1em;
+    &:last-child{
+      margin-bottom:0;
+    }
+    a{
+      width:100%;
+      @include box-sizing;
+      display:inline-block;
+      padding:.5em 0 .5em .5em;
+      border-radius:6px;
+    }
+  }
+  .l-aside-menu-under{
+    margin-left:1em;
+    margin-bottom:10px;
+    li{
+      font-weight:normal;
+      margin-bottom:0px;
+    }
+  }
 }
 
 .l-entry-inner{

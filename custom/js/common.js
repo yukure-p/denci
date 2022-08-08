@@ -1,113 +1,85 @@
 "use strict"; // スマホメニュー開閉
 
 var menuVisivble = function menuVisivble() {
-  // セレクタを取得
-  // const menubtn = document.querySelector(".nav-btn");
-  var body = document.body; // // navfunc動作
-  // const navfunc = function(){
-  //   const state = menubtn.dataset.isActive;
-  //   if(state == "false"){
-  //     menubtn.dataset.isActive = "true";
-  //     body.classList.add("is-visible")
-  //   }else{
-  //     menubtn.dataset.isActive = "false";
-  //     body.classList.remove("is-visible")
-  //   }
-  // };
-  // // ボタンクリックでnavfunc動作
-  // menubtn.addEventListener("click",navfunc);
-
+  var body = document.body;
   var spbtn = document.querySelectorAll(".gnav-btn");
+  console.log(spbtn);
   spbtn.forEach(function (btn) {
     btn.addEventListener("click", function () {
       body.classList.toggle("is-view");
     });
   });
-}; // menuVisivble();
-// // Language
-// const lang = () => {
-//   const check = document.getElementById("jp");
-//   const lang = document.querySelector(".lang-tit a");
-//   if(check !== null){
-//     lang.innerText = "EN";
-//   }else{
-//     lang.innerText = "JP";
-//   }
-// };
-// lang();
-// // custom relation postsのタイトル変更
-// const chenge = () => {
-//   const checks = document.getElementById("jp");
-//   const tit = document.querySelector(".sim-tit");
-//   if(checks !== null){
-//     if(tit !== null){
-//       tit.innerText = "似ている曲";
-//     }
-//   }
-// };
-// chenge();
-// 遅延読み込み
+};
 
+menuVisivble(); // 目次
 
-var $lazy = document.querySelectorAll(".l-box,.lazyload");
-var options = {
-  root: null,
-  // 今回はビューポートをルート要素とする
-  rootMargin: "0px 0px -200px 0px",
-  // ビューポートの中心を判定基準にする
-  threshold: 0 // 閾値は0
+var tableOfContents = function tableOfContents() {
+  var boxes = document.querySelectorAll(".box");
+  var options = {
+    root: null,
+    // 今回はビューポートをルート要素とする
+    rootMargin: "-50% 0px",
+    // ビューポートの中心を判定基準にする
+    threshold: 0 // 閾値は0
 
-}; // inViewportは関数　optionsはオプション
+  };
+  var observer = new IntersectionObserver(doWhenIntersect, options); // それぞれのboxを監視する
 
-var io = new IntersectionObserver(inViewport, options);
-Array.from($lazy).forEach(function (element) {
-  io.observe(element);
-});
-
-function inViewport(entries) {
-  // 交差検知をしたもののなかで、isIntersectingがtrueのDOMを色を変える関数に渡す
-  entries.forEach(function (entry) {
-    if (entry.isIntersecting) {
-      var img = entry.target;
-      img.addEventListener("load", function () {
-        img.classList.add("is-lazyload");
-      });
-      var lb = entry.target;
-      lb.classList.add("is-l-box");
-      var imgEl = entry.target;
-      imgEl.src = imgEl.dataset.src;
-    }
+  boxes.forEach(function (box) {
+    observer.observe(box);
   });
-}
+  /**
+   * 交差したときに呼び出す関数
+   * @param entries
+   */
 
-function doWhenIntersect(entries) {
-  // 交差検知をしたもののなかで、isIntersectingがtrueのDOMを色を変える関数に渡す
-  entries.forEach(function (entry) {
-    if (entry.isIntersecting) {
-      activateIndex(entry.target);
-    }
-  });
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-  // タブに対してクリックイベントを適用
-  var tabs = document.getElementsByClassName('tab');
-
-  for (var i = 0; i < tabs.length; i++) {
-    tabs[i].addEventListener('click', tabSwitch, false);
-  } // タブをクリックすると実行する関数
-
-
-  function tabSwitch() {
-    // タブのclassの値を変更
-    document.getElementsByClassName('is-active')[0].classList.remove('is-active');
-    this.classList.add('is-active'); // コンテンツのclassの値を変更
-
-    document.getElementsByClassName('is-show')[0].classList.remove('is-show');
-    var arrayTabs = Array.prototype.slice.call(tabs);
-    var index = arrayTabs.indexOf(this);
-    document.getElementsByClassName('panel')[index].classList.add('is-show');
+  function doWhenIntersect(entries) {
+    // 交差検知をしたもののなかで、isIntersectingがtrueのDOMを色を変える関数に渡す
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        activateIndex(entry.target);
+      }
+    });
   }
+  /**
+   * 目次の色を変える関数
+   * @param element
+   */
 
-  ;
-}, false);
+
+  function activateIndex(element) {
+    // すでにアクティブになっている目次を選択
+    var currentActiveIndex = document.querySelector("#indexList .active"); // すでにアクティブになっているものが0個の時（=null）以外は、activeクラスを除去
+
+    if (currentActiveIndex !== null) {
+      currentActiveIndex.classList.remove("active");
+    } // 引数で渡されたDOMが飛び先のaタグを選択し、activeクラスを付与
+
+
+    var newActiveIndex = document.querySelector("a[href='#".concat(element.id, "']"));
+    newActiveIndex.classList.add("active");
+  }
+};
+
+tableOfContents();
+
+var scrooll = function scrooll() {
+  window.addEventListener('DOMContentLoaded', function () {
+    var anchorLinks = document.querySelectorAll('a[href^="#"]');
+    var anchorLinksArr = Array.prototype.slice.call(anchorLinks);
+    anchorLinksArr.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        var targetId = link.hash;
+        var targetElement = document.querySelector(targetId);
+        var targetOffsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top - 200;
+        window.scrollTo({
+          top: targetOffsetTop,
+          behavior: "smooth"
+        });
+      });
+    });
+  });
+};
+
+scrooll();
