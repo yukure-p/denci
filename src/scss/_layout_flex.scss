@@ -64,38 +64,35 @@
 .flexList01 {
 	@include flexbox;
 	@include flex-direction($direction:row);
-	// @include flex-wrap;
-	@include flex-justify-content($justify:space-between);
+	@include flex-wrap;
+	@include flex-justify-content($justify:center);
 	column-gap:40px;
+	@include box-sizing;
+	@include media(tablet){
+		@include flex-wrap;
+		row-gap:60px;
+	}
+	@include media(sp){
+		@include flex-wrap;
+		row-gap:60px;
+		column-gap:0px;
+	}
 	&>.box-content {
 		@include box-sizing;
 		width: 25%;
+		@include media(tablet){
+			width: 47%;
+			@include box-sizing;
+		}
+		@include media(sp){
+			width: 47%;
+			@include box-sizing;
+		}
 		&>.box-txt {
 			// padding: $spaceR;
 		}
 	}
-	@include media(sp){
-		.box-content, &.row4>.box-content {width: 100%;}
-		&.type01>.box-content,
-		&.row4.type01>.box-content {
-			width: 50%;
-			float: left;
-		}
-		&.type02>.box-content,
-		&.row4.type02>.box-content {
-			width: 100%;
-			display: table;
-			&>.boxInner {
-				display: table-row;
-			}
-			&>.box-img
-			&>.box-txt {
-				display: table-cell;
-				width: 50%;
-				vertical-align: middle;
-			}
-		}
-	}
+
 	&.type01{
 		&>.box-content {
 			@include box-sizing;
@@ -105,4 +102,52 @@
 	}
 }
 
+
+
+/* ------------------------------------------------
+	.gridシリーズここから
+------------------------------------------------ */
+
+.l-gid{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	gap:70px 40px;
+	@include media(tablet){
+		gap:60px 30px;
+		grid-template-columns:1fr 1fr;
+	}
+	@include media(sp){
+		gap:40px 30px;
+		grid-template-columns:1fr 1fr;
+	}
+	&.type01{
+		grid-template-columns:1fr 1fr 1fr 1fr;
+		@include media(tablet){
+			gap:60px 30px;
+			grid-template-columns:1fr 1fr;
+		}
+		@include media(sp){
+			gap:40px 30px;
+			grid-template-columns:1fr 1fr;
+		}
+	}
+	.l-top & {
+		display:grid;
+		grid-template-columns:1fr 1fr 1fr 1fr;
+		gap:70px 40px;
+		@include media(tablet){
+			gap:60px 30px;
+			grid-template-columns:1fr 1fr 1fr;
+		}
+	}
+	&.top {
+		@include media(tablet){
+			li{
+				&:last-child{
+					display:none;
+				}
+			}
+		}
+	}
+}
 

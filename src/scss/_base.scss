@@ -43,6 +43,9 @@ body {
 	@include media(sp){
 		min-width: 320px;
 		margin:0;
+		&:before{
+			border: 5px solid var(--thema-color01);
+		}
 	}
 }
 

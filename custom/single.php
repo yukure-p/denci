@@ -1,183 +1,291 @@
 <?php get_header(); ?>
 <?php if(have_posts()):?>
 <?php while (have_posts()): the_post(); ?>
-
-  <div class="l-entry">
-    <?php breadcrumb(); ?>
-    <section>
-      <div class="entry-box">
-        <div class="inner-entry-box">
-          <div class="date">
-            <time datetime="<?php echo get_the_date('Y.n.d'); ?>"><?php echo get_the_date('Y.n.d'); ?></time>
-          </div>
-          <h1 class="detail-title"><?php the_title(); ?></h1>
+<div class="l-frame">
+<section>
+    <div class="l-entry">
+      <?php breadcrumb(); ?>
+      <div class="l-entry-inner">
+        <h1 class="l-entry-title" ><span>テイクアウト注文の予約・決済システム「テイクイーツ」はWeb制作会社にも飲食店にもメリットが大きすぎた9</span></h1>
+        <div class="date">
+          <time datetime="<?php echo get_the_date('Y.n.d'); ?>"><?php echo get_the_date('Y.n.d'); ?></time>
         </div>
       </div>
-    </section>
-  </div>
-  <!-- /.l-entry -->
+      
+    </div>
+</section>
 
+<section>
+  
+    <div class="l-container">
+      <div class="l-section">
 
-  <div class="l-container">
-    <article>
-      <div class="l-contents">
-        <div class="detail-content">
-          <div class="detail-box">
-            <section>
-              <?php the_content(); ?>
-            </section>
-          </div>
-          <div class="detail-box">
-            <section>
- <?php
-          $term = get_the_terms($post->ID, 'genre');
-          if (have_posts()) : while (have_posts()) : the_post(); ?>
-          <div class="l-box">
-            <section>
-              <div class="contents-list">
-                <div class="date">
-                  <time datetime="<?php echo get_the_date('Y.n.d'); ?>"><?php echo get_the_date('Y.n.d'); ?></time>
+        <main>
+          <div class="contents-box">
+            <div class="entry-img"><img src="<?php echo get_template_directory_uri()?>/img/kiasmos.jpg" alt="電子商店OPEN GUIDE" width="38" ></div>
+            <div class="table-of-content">
+                <h1 class="aside-tit">この記事の目次</h1>
+                <div class="l-aside-inner">
+                  <ol class="l-aside-menu index" id="indexList">
+                    <li><a href="#index1">サイドメニュー</a>
+                      <ol class="l-aside-menu-under">
+                        <li><a href="#index2">ああああああaaaaaaaaa</a></li>
+                        <li><a href="#index3">いいいいいいbbbbbbbbbbb</a></li>
+                        <li><a href="#index4">うううううcccccccccccc</a></li>
+                      </ol>
+                    </li>
+                    <!-- <li><a href="#index2" >サイドメニュー</a></li> -->
+                    <!-- <li><a href="#index3">サイドメニュー</a></li>
+                    <li><a href="#index4">サイドメニュー</a></li> -->
+                    <li><a href="#index5">サイドメニュー</a></li>
+                    <li><a href="#index6">サイドメニュー</a>
+
+                      <ol class="l-aside-menu-under">
+                        <li><a href="#index7">ああああああaaaaaaaaa</a></li>
+                        <li><a href="#index8">いいいいいいbbbbbbbbbbb</a></li>
+                        <li><a href="#index9">いいいいいいbbbbbbbbbbb</a></li>
+                        
+                      </ol>
+                    </li>
+                    <!-- <li><a href="#index7">サイドメニュー</a></li>
+                    <li><a href="#index8">サイドメニュー</a></li> -->
+                    
+                  </ol>
                 </div>
-                <div class="box-img">
-                  <a href="<?php echo get_permalink($post->ID); ?>" class="linkBl01">
-                    <?php
-                      $thumbnail_id = get_post_thumbnail_id($post->ID);
-                      $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'music-list');
-                      if (get_post_thumbnail_id($post->ID)) {
-                        echo '<img src="' . $thumb_url[0] . '" alt="">';
-                      } else {
-                        echo '<img src="' . get_template_directory_uri() . '/img/img-default.png" alt="">';
-                      }
-                    ?>      
-                  </a>
-                </div>
-
-                <div class="box-contents">
-                  <?php
-                    $terms = get_the_terms($post->ID, 'genre');
-                    if($terms):
-                      echo '<ul class="category-tag" arial-label="タグ">';
-
-                      foreach($terms as $term):
-                        $term_name = $term->name;
-                        $term_link = get_term_link( $term );
-                        echo '<li><a href="'.$term_link.'" class="link01">'.$term_name.'</a></li>';
-                      endforeach;
-                      echo '</ul>';
-                    endif;
-                  ?>
-                  <h1 class="list-title">
-                    <a href="<?php echo get_permalink($post->ID); ?>" class="link03"><?php echo get_the_title($post->ID); ?></a>
-                  </h1>
-                  <?php
-                    $terms = get_the_terms($post->ID, 'type');
-                    if($terms):
-                      echo '<ul class="type-tag" arial-label="タグ">';
-                      foreach($terms as $term):
-                        $term_name = $term->name;
-                        $term_link = get_term_link( $term );
-                        echo '<li><a href="'.$term_link.'" class="link02">'.$term_name.'</a></li>';
-                      endforeach;
-                      echo '</ul>';
-                    endif;
-                  ?>
-                </div>  
               </div>
-            </section>
-          </div>
-          <?php endwhile;?>
-          <?php wp_reset_postdata(); ?>
-          <?php endif; ?>
-            </section>
-          </div>
-          <div class="detail-aside">
-            <section class="detail-box-inner">
-              <div class="detail-img">
-                <?php
-                  // アイキャッチ画像を取得
-                  $thumbnail_id = get_post_thumbnail_id($post->ID);
-                  $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'music-list');
-                  if (get_post_thumbnail_id($post->ID)) {
-                    echo '<img src="' . $thumb_url[0] . '" alt="">';
-                  } else {
-                    // アイキャッチ画像が登録されていなかったときの画像
-                    echo '<img src="' . get_template_directory_uri() . '/img/img-default.png" alt="">';
-                  }
-                ?>   
+
+              <div class="c-box box" id="index1">
+                <h2 class="c-tit02">タイトルh2タイトルh2タイトルh2</h2>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
               </div>
-              <ul class="detail-info">
-                <li><span class="agenda">ARTIST</span><a href="" class="link01"><?php the_field('artist'); ?></a></li>
-                <li><span class="agenda">TITLE</span><?php the_field('title'); ?></li>
-                <li><span class="agenda"><?php the_field('format'); ?></span><?php the_field('content-tit'); ?></li>
-                <li><span class="agenda">RELEASE</span><?php the_field('release'); ?></li>
-              </ul>
 
-              <div class="detail-tag">
-                <!-- <h1 class="tag-tit">Category</h1> -->
-                <?php
-                  $terms = get_the_terms($post->ID, 'genre');
-                  if($terms):
-                    echo '<ul class="category-tag" arial-label="タグ">';
 
-                    foreach($terms as $term):
-                      $term_name = $term->name;
-                      $term_link = get_term_link( $term );    //$termはオブジェクトなので第二引数は省略可
-                      echo '<li><a href="'.$term_link.'" class="link01">'.$term_name.'</a></li>';
-                    endforeach;
+              <div class="c-box box" id="index2">
+                <h3 class="c-tit02">aaaaaaaaaaaaa</h3>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+              </div>
 
-                    echo '</ul>';
-                  endif;
-                ?>
+              <div class="c-box box" id="index3">
+                <h3 class="c-tit03">bbbbbbbbbbbbbb</h3>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+              </div>
+
+              <div class="c-box box" id="index4">
+                <h4 class="c-tit04">ccccccccccccccc</h4>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+              </div>
+ 
+                        
+              <div class="c-box box" id="index5"> 
+                <h2 class="c-tit02">タイトルh2タイトルh2タイトルh2</h2>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+              </div>
+
+              <div class="c-box box" id="index6">
+                <h2 class="c-tit02">タイトルh2タイトルh2タイトルh2</h2>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+              </div>
+
+              <div class="c-box box" id="index7"> 
+                <h3 class="c-tit03">タイトルh3タイトルh3タイトルh3</h3>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+              </div>
+
+              <div class="c-box box" id="index8"> 
+                <h4 class="c-tit04">タイトルh4タイトルh4タイトルh4</h4>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+              </div>
+              <div class="c-box box" id="index9"> 
+                <h4 class="c-tit04">タイトルh4タイトルh4タイトルh4</h4>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+                <p class="c-txt">テキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスとスとテキスとテキスとテキスとテキスとテキスとテキスと</p>
+              </div>
+
+          </div>
+
+        </main>
+
+        <aside>
+          <div class="l-aside">
+            <h1 class="aside-tit">この記事の目次</h1>
+            <div class="l-aside-inner">
+              <ol class="l-aside-menu index" id="indexList">
+                <li><a href="#index1">サイドメニュー</a>
+                  <ol class="l-aside-menu-under">
+                    <li><a href="#index2">ああああああaaaaaaaaa</a></li>
+                    <li><a href="#index3">いいいいいいbbbbbbbbbbb</a></li>
+                    <li><a href="#index4">うううううcccccccccccc</a></li>
+                  </ol>
+                </li>
+                <!-- <li><a href="#index2" >サイドメニュー</a></li> -->
+                <!-- <li><a href="#index3">サイドメニュー</a></li>
+                <li><a href="#index4">サイドメニュー</a></li> -->
+                <li><a href="#index5">サイドメニュー</a></li>
+                <li><a href="#index6">サイドメニュー</a>
+
+                  <ol class="l-aside-menu-under">
+                    <li><a href="#index7">ああああああaaaaaaaaa</a></li>
+                    <li><a href="#index8">いいいいいいbbbbbbbbbbb</a></li>
+                    <li><a href="#index9">いいいいいいbbbbbbbbbbb</a></li>
+                    
+                  </ol>
+                </li>
+                <!-- <li><a href="#index7">サイドメニュー</a></li>
+                <li><a href="#index8">サイドメニュー</a></li> -->
                 
-                <?php
-                  $terms = get_the_terms($post->ID, 'type');
-                  if($terms):
-                    echo '<ul class="type-tag" arial-label="タグ">';
-
-                    foreach($terms as $term):
-                      $term_name = $term->name;
-                      $term_link = get_term_link( $term );    //$termはオブジェクトなので第二引数は省略可
-                      echo '<li><a href="'.$term_link.'" class="link02">'.$term_name.'</a></li>';
-                    endforeach;
-
-                    echo '</ul>';
-                  endif;
-                ?>
-              </div>
-
-            </section>
+              </ol>
+            </div>
           </div>
-        </div>
-       
+        </aside>
       </div>
-      <!-- /.l-contents -->
-    </article> 
-  </div>
-  <!-- /.l-container -->
-</div>
-<!-- /.l-flame -->
-<?php endwhile; ?>
-<?php endif; ?>
+    </div>
+  
+  
+</section>
 
-        <?php get_template_part('template-parts/similar'); ?>
+
+
+   <section>
+      <div class="l-container">
+         <h1 class="tit-01"><span>関連記事</span></h1>
+         <div class="l-contents">
+            <ul class="contents-list l-gid type01">
+               <li class="box-content">
+                  <div class="box-item">
+                     <div class="date">
+                        <time datetime="">2022.08.30</time>
+                     </div>
+                     <div class="box-img">
+                        <a href="" class="linkBl01">
+                        <img src="<?php echo get_template_directory_uri()?>/img/kiasmos.jpg" alt="電子商店OPEN GUIDE" width="38" >
+                        </a>
+                     </div>
+                     <div class="box-txt">
+                        <h1 class="box-tit">
+                        <a href="" class="link03">タイトルタイトルタイトルタイトルタイトル</a>
+                        </h1>
+
+                     </div>
+                  </div>
+               </li>
+               <li class="box-content">
+                  <div class="box-item">
+                     <div class="date">
+                        <time datetime="">2022.08.30</time>
+                     </div>
+                     <div class="box-img">
+                        <a href="" class="linkBl01">
+                        <img src="<?php echo get_template_directory_uri()?>/img/kiasmos.jpg" alt="電子商店OPEN GUIDE" width="38" >
+                        </a>
+                     </div>
+                     <div class="box-txt">
+                        <h1 class="box-tit">
+                        <a href="" class="link03">タイトルタイトルタイトルタイトルタイトル</a>
+                        </h1>
+
+                     </div>
+                  </div>
+               </li>
+               <li class="box-content">
+                  <div class="box-item">
+                     <div class="date">
+                        <time datetime="">2022.08.30</time>
+                     </div>
+                     <div class="box-img">
+                        <a href="" class="linkBl01">
+                        <img src="<?php echo get_template_directory_uri()?>/img/kiasmos.jpg" alt="電子商店OPEN GUIDE" width="38" >
+                        </a>
+                     </div>
+                     <div class="box-txt">
+                        <h1 class="box-tit">
+                        <a href="" class="link03">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</a>
+                        </h1>
+
+                     </div>
+                  </div>
+               </li>
+               <li class="box-content">
+                  <div class="box-item">
+                     <div class="date">
+                        <time datetime="">2022.08.30</time>
+                     </div>
+                     <div class="box-img">
+                        <a href="" class="linkBl01">
+                        <img src="<?php echo get_template_directory_uri()?>/img/kiasmos.jpg" alt="電子商店OPEN GUIDE" width="38" >
+                        </a>
+                     </div>
+                     <div class="box-txt">
+                        <h1 class="box-tit">
+                        <a href="" class="link03">タイトルタイトルタイトルタイトルタイトル</a>
+                        </h1>
+                        
+                     </div>
+                  </div>
+               </li>
+            </ul>
         
 
-<div class="l-frame">
-  <div class="l-container">
-    <article> 
-      <div class="l-contents">
-        <h1 class="list-tit">MUSIC</h1>
-
-        <div class="l-lists space-topXL" id="result">
-          <?php get_template_part( 'search' ); // 検索フォームを読み込み. ?>
 
         </div>
-
       </div>
-      <!-- /.l-contents -->
-    </article> 
-  </div>
-  <!-- /.l-container -->
+     </section>
+</div>
+
+
+
+
+        
 
 
 
@@ -187,6 +295,8 @@
 
 
 
+<?php endwhile; ?>
+<?php endif; ?>
 
 
 

@@ -23,7 +23,36 @@
         <main>
           <div class="contents-box">
             <div class="entry-img"><img src="<?php echo get_template_directory_uri()?>/img/kiasmos.jpg" alt="電子商店OPEN GUIDE" width="38" ></div>
-          
+            <div class="table-of-content">
+                <h1 class="aside-tit">この記事の目次</h1>
+                <div class="l-aside-inner">
+                  <ol class="l-aside-menu index" id="indexList">
+                    <li><a href="#index1">サイドメニュー</a>
+                      <ol class="l-aside-menu-under">
+                        <li><a href="#index2">ああああああaaaaaaaaa</a></li>
+                        <li><a href="#index3">いいいいいいbbbbbbbbbbb</a></li>
+                        <li><a href="#index4">うううううcccccccccccc</a></li>
+                      </ol>
+                    </li>
+                    <!-- <li><a href="#index2" >サイドメニュー</a></li> -->
+                    <!-- <li><a href="#index3">サイドメニュー</a></li>
+                    <li><a href="#index4">サイドメニュー</a></li> -->
+                    <li><a href="#index5">サイドメニュー</a></li>
+                    <li><a href="#index6">サイドメニュー</a>
+
+                      <ol class="l-aside-menu-under">
+                        <li><a href="#index7">ああああああaaaaaaaaa</a></li>
+                        <li><a href="#index8">いいいいいいbbbbbbbbbbb</a></li>
+                        <li><a href="#index9">いいいいいいbbbbbbbbbbb</a></li>
+                        
+                      </ol>
+                    </li>
+                    <!-- <li><a href="#index7">サイドメニュー</a></li>
+                    <li><a href="#index8">サイドメニュー</a></li> -->
+                    
+                  </ol>
+                </div>
+              </div>
 
               <div class="c-box box" id="index1">
                 <h2 class="c-tit02">タイトルh2タイトルh2タイトルh2</h2>
@@ -171,7 +200,7 @@
       <div class="l-container">
          <h1 class="tit-01"><span>関連記事</span></h1>
          <div class="l-contents">
-            <ul class="contents-list flexList01">
+            <ul class="contents-list l-gid type01">
                <li class="box-content">
                   <div class="box-item">
                      <div class="date">

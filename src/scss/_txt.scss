@@ -76,16 +76,9 @@
 	font-feature-settings: "palt";
 	letter-spacing: .25em;
 	position:relative;
-	// &:before{
-	// 	content:'';
-	// 	top:52px;
-	// 	background:var(--thema-color01);
-	// 	height:16px;
-	// 	width:60px;
-	// 	border-radius:3px;
-	// 	position:absolute;
-	// }
-	// span{
+	@include media(sp){
+		font-size:var(--fSize9);
+	}
 		&:before,&:after{
 			content:'';
 			background-size: cover;
@@ -102,6 +95,12 @@
 			height:32px;
 			left:-31px;
 			top:-22px;
+			@include media(sp){
+				width:25px;
+				height:25px;
+				left:-22px;
+				top:-14px;
+			}
 		}
 		&:after{
 			content:'';
@@ -111,6 +110,12 @@
 			height:42px;
 			right:-36px;
 			top:-24px;
+			@include media(sp){
+				width:36px;
+				height:36px;
+				right:-23px;
+				top:-21px;
+			}
 		}
 
 	// }

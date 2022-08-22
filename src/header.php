@@ -55,13 +55,17 @@
     $my_body_class = 'l-top';
   } else if ( is_single() ) {
     $my_body_class = 'l-local';
+  } else if ( is_page() ) {
+    $my_body_class = 'l-list';
   } else if ( is_archive() ) {
     $my_body_class = 'l-list';
   }else if ( is_404() ) {
     $my_body_class = 'l-top';
+  }else if ( is_search() ) {
+    $my_body_class = 'l-list';
   }
 ?>
-<body id="jp" <?php echo ( $my_body_class ) ? ' class="l-grid ' . $my_body_class . '"' : ''; ?>>
+<body id="jp" <?php echo ( $my_body_class ) ? ' class="' . $my_body_class . '"' : ''; ?>>
 
 
 <header>
@@ -71,6 +75,11 @@
         <img src="<?php echo get_template_directory_uri()?>/img/common/logo.svg" alt="電子商店OPEN GUIDE">
       </a>
     </h1>
+
+    <!-- <div class="l-header-search"> -->
+      <!-- <img src="<?php echo get_template_directory_uri()?>/img/common/search.svg" alt="検索" width="20" > -->
+      <?php get_search_form(); ?>
+    <!-- </div> -->
     
     <div class="gnav-botton">
       <div class="gnav-botton-inner gnav-btn">

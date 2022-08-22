@@ -17,8 +17,8 @@ $icoSprite01:'/common/img/sprite_ico01.png';
   // フォントカラー
   --font-color01: #333333;//
   --font-color02: #808080;//data
-  // --font-color03: #fff;//
-  // --font-color04: #bfbfbf;//
+  --font-color03:#c9c9c9;//form placeholder
+  --font-color04: #ffffff;//
   // --font-color05:#656565;//list-tit a のカラー
 
   // 背景カラー
@@ -26,6 +26,7 @@ $icoSprite01:'/common/img/sprite_ico01.png';
   --bg-color02: #333333;//
   --bg-color03: #fff;//
   --bg-color04: #e9e9e9;
+  --bg-color05:#c20000;//form requirer
   // --bg-color05: #F5F5F5;
   // --bg-color06: #535353;
   // --bg-color07: #f3f3f3;
@@ -36,7 +37,10 @@ $icoSprite01:'/common/img/sprite_ico01.png';
   // ボーダーカラー
   --border-color01: #333333;
   --border-color02: #ffffff;
-  // --border-color02: #333333;//サイドメニューBTN
+  --border-color03: #e7ce00;
+  --border-color04: #333333;
+  --border-color05: #c4c4c4;//formの区切り
+  --border-color06: #e5e1c5;//tabe非アクティブ
   // --border-color03: #d8d8d8;//タイトル下のライン　フッターのライン
   // --border-color04: #fff;//スマホメニュー検索結果 メニューライン
 
@@ -73,22 +77,22 @@ $icoSprite01:'/common/img/sprite_ico01.png';
   --fSize13: calc((29* 0.1) * 1rem);
   --fSize14: calc((30* 0.1) * 1rem);
   --font-entry: calc((34* 0.1) * 1rem);//記事ページ見出し
-  --EnfontS: calc((32* 0.1) * 1rem);
+  --font-nav: calc((34* 0.1) * 1rem);
   --EnfontR: calc((34* 0.1) * 1rem);
   --EnfontL: calc((36* 0.1) * 1rem);
   --EnfontXL: calc((40* 0.1) * 1rem);
   --MVfont: calc((60* 0.1) * 1rem);
-  --font404: calc((180* 0.1) * 1rem);
-
+  --font404: calc((100* 0.1) * 1rem);
+  --font4042: calc((40* 0.1) * 1rem);
 
   // コンテンツ幅
   --cn-max-width: 1440px;
-  --local-max-width: 1240px;
+  --contents-max-width: 1240px;
   --cniW: 975px;
-  --cn-width:calc(1340 / 1440 * 100%);
-  --cn-sp-width:90%;
+  --cn-width:calc(1300 / 1440 * 100%);
+  --cn-sp-width:86%;
   // ヘッダー
-  --header-height:180px;
+  --header-height:80px;
   --header-height-scroll:120px;
 
   //サイド
@@ -102,7 +106,9 @@ $icoSprite01:'/common/img/sprite_ico01.png';
   --spaceXL: 60px;//
   --spaceContent: 120px;//
   --spaceContentSP: 40px;///
-  --nav-width:120px; //
+  // --nav-width:100px; //canter用
+  --nav-width:50px; //
+  --search-width:20px; //
   --logo-width:130px;//
   --sp-nav-lang-width:60px; //
   --sp-nav-gnav-width:60px; //
@@ -166,9 +172,18 @@ $icoSprite01:'/common/img/sprite_ico01.png';
 
 }
 
-// PC：設定なし（実質1025px以上）
-// タブレット：1024px [max-width : 1024px]
-// スマートフォン：599px [max-width : 599px]
+
+
+@include media(sp){
+  .pc{
+    display:none;
+  }
+}
+@include media(pc){
+  .sp{
+    display:none;
+  }
+}
 
 //　==================================================
 //　プレースホルダー

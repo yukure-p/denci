@@ -235,6 +235,19 @@ a.sns-btn{
 			@include scale($property: 1.2); 
 		}
 	}
+	.f-link-sns & {
+
+		&:before{
+			content:'';
+			@include transition($property: all, $time: .5s, $timing: cubic-bezier(0, 0.49, 0.05, 0.99));
+			width:24px;
+			height:24px;
+			border-radius:50%;
+			position:absolute;
+			top:0;
+			left:0;
+		}
+	}
 }
 
 a.sns-btn-c01{

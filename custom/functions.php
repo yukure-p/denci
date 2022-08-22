@@ -25,13 +25,13 @@ if (is_front_page()){
         // $scriptPath = '/js/entry.min.js';
     }
 
-    wp_enqueue_script(
-        'custom_script',
-        get_template_directory_uri() . $scriptPath,
-        '',
-        date("His"),
-        true
-    );
+    // wp_enqueue_script(
+    //     'custom_script',
+    //     get_template_directory_uri() . $scriptPath,
+    //     '',
+    //     date("His"),
+    //     true
+    // );
 
   wp_enqueue_script(
     '',
@@ -99,142 +99,6 @@ add_action( 'init', 'suound_register_block_patterns' );
 
 
 
-
-
-//カスタム投稿日本語
-add_action( 'init', 'create_post_type_music' );
-function create_post_type_music() {
-  register_post_type( 'music', // post-type
-    array(
-      'labels' => array(
-      'name' => __( 'Music' ),
-      'add_new' => _x('新規追加', 'music'),
-      'add_new_item' => __('musicを追加'),
-      'singular_name' => __( 'music' )
-      ),
-      'public' => true,
-      'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields' ,'comments' ),
-      'menu_position' =>200,
-      'show_in_rest' => true,
-      'has_archive' => true,
-      'with_front' => true,
-      // 'rewrite' => array( 'with_front' => false ),
-      // 'rest_base' => 'music',
-    )
-  );
-  //カスタムタクソノミー、カテゴリタイプ*
-  register_taxonomy(
-    'genre',
-    'music',
-    array(
-      'hierarchical' => true,
-      'update_count_callback' => '_update_post_term_count',
-      'label' => 'ジャンル',
-      'singular_label' => 'ジャンル',
-      'public' => true,
-      'show_ui' => true,
-      'show_admin_column' => true,
-      // 'rewrite' => false,
-      // 'rewrite' => array( 'slug' => 'music' ), //変更後のスラッグ
-    )
-  );
-  //カスタムタクソノミー、タグタイプ*
-  register_taxonomy(
-    'type',
-    'music',
-    array(
-      'hierarchical' => true,
-      'update_count_callback' => '_update_post_term_count',
-      'label' => 'タイプ',
-      'singular_label' => 'タイプ',
-      'public' => true,
-      'show_ui' => true,
-      'show_admin_column' => true,
-      // 'rewrite' => false,
-      // 'rewrite' => array( 'slug' => 'music' ), //変更後のスラッグ
-    )
-  );
-  //カスタムタクソノミー、artist*
-  register_taxonomy(
-    'artist',
-    'music',
-    array(
-      'hierarchical' => true,
-      'update_count_callback' => '_update_post_term_count',
-      'label' => 'Artist',
-      'singular_label' => 'Artist',
-      'public' => true,
-      'show_ui' => true,
-      'show_admin_column' => true,
-      // 'rewrite' => false,
-      // 'rewrite' => array( 'slug' => 'music' ), //変更後のスラッグ
-    )
-  );          
-}
-
-
-
-
-//カスタム投稿日本語
-add_action( 'init', 'create_post_type_open_guide' );
-function create_post_type_open_guide() {
-  register_post_type( 'open_guide', // post-type
-    array(
-      'labels' => array(
-      'name' => __( 'open_guide' ),
-      'add_new' => _x('新規追加', 'open_guide'),
-      'add_new_item' => __('open_guideを追加'),
-      'singular_name' => __( 'open_guide' )
-      ),
-      'public' => true,
-      'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields' ,'comments' ),
-      'menu_position' =>200,
-      'show_in_rest' => true,
-      'has_archive' => true,
-      'with_front' => true,
-      // 'rewrite' => array( 'with_front' => false ),
-      // 'rest_base' => 'open_guide',
-    )
-  );
-  //カスタムタクソノミー、カテゴリタイプ*
-  register_taxonomy(
-    'before',
-    'open_guide',
-    array(
-      'hierarchical' => true,
-      'update_count_callback' => '_update_post_term_count',
-      'label' => '開設前に知っっておくこと',
-      'singular_label' => '開設前に知っっておくこと',
-      'public' => true,
-      'show_ui' => true,
-      'show_admin_column' => true,
-      // 'rewrite' => false,
-      // 'rewrite' => array( 'slug' => 'open_guide' ), //変更後のスラッグ
-    )
-  );
-  //カスタムタクソノミー、タグタイプ*
-  register_taxonomy(
-    'asp',
-    'open_guide',
-    array(
-      'hierarchical' => true,
-      'update_count_callback' => '_update_post_term_count',
-      'label' => 'ASPサービスについて',
-      'singular_label' => 'ASPサービスについて',
-      'public' => true,
-      'show_ui' => true,
-      'show_admin_column' => true,
-      // 'rewrite' => false,
-      // 'rewrite' => array( 'slug' => 'open_guide' ), //変更後のスラッグ
-    )
-  );         
-}
-
-
-
-
-
-
 function yukury_block_setup(){
   add_theme_support('wp-block-style');
   add_theme_support(
@@ -255,12 +119,30 @@ add_action('after_setuptheme','yukury_block_setup');
 // パンくずリスト
 function breadcrumb() {
   $home = '<li><a href="'.get_bloginfo('url').'">HOME</a></li>';
-  $arch = '<li><a href="'.get_bloginfo('url').'/music">MUSIC</a></li>';
-  $archiv = '<li>MUSIC</li>';
+  $arch = '<li><a href="'.get_bloginfo('url').'/list">記事一覧</a></li>';
+  $archiv = '<li>記事一覧</li>';
   echo '<ul class="breadcrumb">';
 
   // トップページの場合
   if ( is_front_page() ) {
+
+}else if ( is_category() ) {
+        // カテゴリページの場合
+        $cat = get_queried_object();
+        $cat_id = $cat->parent;
+        $cat_list = array();
+        while ($cat_id != 0){
+            $cat = get_category( $cat_id );
+            $cat_link = get_category_link( $cat_id );
+            array_unshift( $cat_list, '<li><a href="'.$cat_link.'">'.$cat->name.'</a></li>' );
+            $cat_id = $cat->parent;
+        }
+        echo $home;
+        foreach($cat_list as $value){
+            echo $value;
+        }
+        the_archive_title('<li>', '</li>');
+
 
 
   // アーカイブページの場合
@@ -268,8 +150,13 @@ function breadcrumb() {
   echo $home;
   echo $archiv;
 
+
+
+  
+
   // 投稿ページの場合
   } else if ( is_single() ) {
+    echo $home;
   $cat = get_the_category();
     if( isset($cat[0]->cat_ID) ) $cat_id = $cat[0]->cat_ID;
     $cat_list = array();
@@ -282,8 +169,7 @@ function breadcrumb() {
     foreach($cat_list as $value){
         echo $value;
     }
-    echo $home;
-    echo $arch;
+    
     the_title('<li>', '</li>');
 
 
@@ -304,84 +190,109 @@ function breadcrumb() {
   }
   echo '</ul>';
 
+
+}
+
+
+
+
+
 add_filter( 'get_the_archive_title', function ($title) {
-  if (is_category()) {
-      $title = single_cat_title('',false);
-  } elseif (is_tag()) {
-      $title = single_tag_title('',false);
-  } elseif (is_tax()) {
-      $title = single_term_title('',false);
-  } elseif (is_archive() ){
-      $title = the_archive_title('',false);  
-  } elseif (is_single() ){
-      $title = the_single_title('',false); 
-  } elseif (is_search()) {
-      $title = '検索結果：'.esc_html( get_search_query(false) );
-  } elseif (is_404()) {
-      $title = '「404」ページが見つかりません';
-  } else {
+    if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    } elseif ( is_tag() ) {
+        $title = single_tag_title( '', false );
+    } elseif ( is_month() ) {
+        $title = single_month_title( '', false );
+    }
+    return $title;
+});
 
+
+/*【出力カスタマイズ】検索対象をカスタム投稿タイプで絞り込む */
+function my_pre_get_posts($query) {
+  if ( !is_admin() && $query->is_main_query() && $query->is_search() ) {
+    $query->set( 'post_type', array('post','page','blog') );
   }
-    return $title;
-});  
 }
+add_action( 'pre_get_posts','my_pre_get_posts' );
+// function custom_archive_title($title){
+//     $titleParts=explode(': ',$title);
+//     if($titleParts[1]){
+//         return $titleParts[1];
+//     }
+//     return $title;
+// }
+// add_filter('get_the_archive_title','custom_archive_title');
 
 
-function custom_archive_title($title){
-    $titleParts=explode(': ',$title);
-    if($titleParts[1]){
-        return $titleParts[1];
+// // 列の内容を追加
+// function my_add_columns($columns){
+//     $columns['my_column_name'] = 'アーティスト';
+
+//     // 日付を列の最後に移動
+//     $date = $columns['date'];
+//     unset($columns['date']);
+//     $columns['date'] = $date;
+
+//     return $columns;
+// }
+
+// add_filter('manage_edit-music_columns', 'my_add_columns');
+
+// // カスタムフィールド　アーティスト名表示
+// function my_add_columns_content($column_name, $post_id){
+//     if ($column_name == 'my_column_name') {
+//         // カスタムフィールドを表示
+//         $stitle = get_post_meta($post_id, 'artist', true);
+//     }
+
+//     if (isset($stitle) && $stitle) {
+//         echo esc_attr($stitle);
+//     }
+// }
+
+// add_action('manage_music_posts_custom_column', 'my_add_columns_content', 10, 2);
+
+// // カスタムフィールド　ID表示
+// function add_posts_columns_postid($columns) { 
+//   $columns['postid'] = 'ID'; 
+//   return $columns; 
+// } 
+// // カスタムフィールド　ID表示項目
+// function add_posts_columns_postid_row($column_name, $post_id) { 
+//   if( 'postid' == $column_name ) { 
+//     echo $post_id; } 
+//   } 
+// add_filter( 'manage_posts_columns', 'add_posts_columns_postid' ); 
+// add_action( 'manage_posts_custom_column', 'add_posts_columns_postid_row', 10, 2 );
+
+
+
+
+
+// contact formメールアドレス一致確認
+add_filter( 'wpcf7_validate_email', 'wpcf7_validate_email_filter_extend', 11, 2 );
+add_filter( 'wpcf7_validate_email*', 'wpcf7_validate_email_filter_extend', 11, 2 );
+function wpcf7_validate_email_filter_extend( $result, $tag ) {
+    $type = $tag['type'];
+    $name = $tag['name'];
+    $_POST[$name] = trim( strtr( (string) $_POST[$name], "n", " " ) );
+    if ( 'email' == $type || 'email*' == $type ) {
+        if (preg_match('/(.*)_confirm$/', $name, $matches)){ //確認用メルアド入力フォーム名を ○○○_confirm としています。
+            $target_name = $matches[1];
+            if ($_POST[$name] != $_POST[$target_name]) {
+                if (method_exists($result, 'invalidate')) {
+                    $result->invalidate( $tag,"確認用のメールアドレスが一致していません");
+                } else {
+                    $result['valid'] = false;
+                    $result['reason'][$name] = '確認用のメールアドレスが一致していません';
+                }
+            }
+        }
     }
-    return $title;
+    return $result;
 }
-add_filter('get_the_archive_title','custom_archive_title');
-
-
-// 列の内容を追加
-function my_add_columns($columns){
-    $columns['my_column_name'] = 'アーティスト';
-
-    // 日付を列の最後に移動
-    $date = $columns['date'];
-    unset($columns['date']);
-    $columns['date'] = $date;
-
-    return $columns;
-}
-
-add_filter('manage_edit-music_columns', 'my_add_columns');
-
-// カスタムフィールド　アーティスト名表示
-function my_add_columns_content($column_name, $post_id){
-    if ($column_name == 'my_column_name') {
-        // カスタムフィールドを表示
-        $stitle = get_post_meta($post_id, 'artist', true);
-    }
-
-    if (isset($stitle) && $stitle) {
-        echo esc_attr($stitle);
-    }
-}
-
-add_action('manage_music_posts_custom_column', 'my_add_columns_content', 10, 2);
-
-// カスタムフィールド　ID表示
-function add_posts_columns_postid($columns) { 
-  $columns['postid'] = 'ID'; 
-  return $columns; 
-} 
-// カスタムフィールド　ID表示項目
-function add_posts_columns_postid_row($column_name, $post_id) { 
-  if( 'postid' == $column_name ) { 
-    echo $post_id; } 
-  } 
-add_filter( 'manage_posts_columns', 'add_posts_columns_postid' ); 
-add_action( 'manage_posts_custom_column', 'add_posts_columns_postid_row', 10, 2 );
-
-
-
-
-
 
 
 

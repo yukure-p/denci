@@ -4,47 +4,64 @@
 <footer>
 	<div class="l-footer">
 		<div class="l-footer-inner">
-
-			<div class="footer-logo">
-				<section>
-					<div class="f-logo-outer">
-						<div class="f-logo"><a href="<?php echo esc_url (home_url()); ?>"><img src="<?php echo get_template_directory_uri()?>/img/common/logo.svg" alt="SOUNDLOG"></a>
-						</div>
-						<div class="f-sns">
-							<ul class="f-link-sns">
-								<li><a href="" class="sns-btn sns-btn-c01"><img src="<?php echo get_template_directory_uri()?>/img/common/tlogo.svg" alt=""></a></li>
-								<li><a href="" class="sns-btn sns-btn-c01"><img src="<?php echo get_template_directory_uri()?>/img/common/ilogo.svg" alt=""></a></li>
-							</ul>
-						</div>
+			<section>
+				<div class="f-logo-box">
+					<div class="f-logo">
+						<a href="<?php echo esc_url (home_url()); ?>"><img src="<?php echo get_template_directory_uri()?>/img/common/logo.svg" alt="SOUNDLOG"></a>
 					</div>
 					
-					<p class="f-txt">ネットショップを開設したい初心者向けの開設ガイドサイトです。</p>
-				</section>
-			</div>
-
-			<div class="footer-link-box">
-				<div class="footer-link">
-					<section>
-						<h1 class="f-tit">MENU</h1>
-						<ul class="f-link">
-							<li><a href="" class="link01">TOP</a></li>
-							<li><a href="" class="link01">記事一覧</a></li>
-							<li><a href="" class="link01">ABOUT</a></li>
-							<li><a href="" class="link01">CONTACT</a></li>
-						</ul>
-					</section>
 				</div>
-				<div class="footer-link">
-					<section>
-						<h1 class="f-tit">記事カテゴリ</h1>
-						<ul class="f-link">
-							<li><a href="" class="link01">開設前に知っておくこと</a></li>
-							<li><a href="" class="link01">ASPカートサービスについて</a></li>
-						</ul>
-					</section>
-				</div>
-			</div>
 			
+				<div class="f-box">
+					
+					<div class="f-txt-box">
+						<p class="f-txt">ネットショップを開設したい初心者向けの開設ガイドサイトです。</p>
+						<ul class="f-link-sns">
+							<li>
+								<a href="" class="link01">
+									<svg version="1.1" class="twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 248 204" style="enable-background:new 0 0 248 204;" xml:space="preserve">
+									<g id="Logo_1_">
+										<path id="white_background" class="st0" d="M221.95,51.29c0.15,2.17,0.15,4.34,0.15,6.53c0,66.73-50.8,143.69-143.69,143.69v-0.04
+											C50.97,201.51,24.1,193.65,1,178.83c3.99,0.48,8,0.72,12.02,0.73c22.74,0.02,44.83-7.61,62.72-21.66
+											c-21.61-0.41-40.56-14.5-47.18-35.07c7.57,1.46,15.37,1.16,22.8-0.87C27.8,117.2,10.85,96.5,10.85,72.46c0-0.22,0-0.43,0-0.64
+											c7.02,3.91,14.88,6.08,22.92,6.32C11.58,63.31,4.74,33.79,18.14,10.71c25.64,31.55,63.47,50.73,104.08,52.76
+											c-4.07-17.54,1.49-35.92,14.61-48.25c20.34-19.12,52.33-18.14,71.45,2.19c11.31-2.23,22.15-6.38,32.07-12.26
+											c-3.77,11.69-11.66,21.62-22.2,27.93c10.01-1.18,19.79-3.86,29-7.95C240.37,35.29,231.83,44.14,221.95,51.29z"/>
+											</g>
+										</svg>
+									<span>Twitter</span>
+								</a>
+							</li>
+							<li><a href="" class="link01"><svg class="instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 503.84 503.84"><path class="cls-1" d="M256,49.47c67.27,0,75.23.26,101.8,1.47,24.56,1.12,37.9,5.22,46.78,8.67a78,78,0,0,1,29,18.85,78,78,0,0,1,18.85,29c3.45,8.88,7.55,22.22,8.67,46.78,1.21,26.57,1.47,34.53,1.47,101.8s-.26,75.23-1.47,101.8c-1.12,24.56-5.22,37.9-8.67,46.78a83.51,83.51,0,0,1-47.81,47.81c-8.88,3.45-22.22,7.55-46.78,8.67-26.56,1.21-34.53,1.47-101.8,1.47s-75.24-.26-101.8-1.47c-24.56-1.12-37.9-5.22-46.78-8.67a78,78,0,0,1-29-18.85,78,78,0,0,1-18.85-29c-3.45-8.88-7.55-22.22-8.67-46.78-1.21-26.57-1.47-34.53-1.47-101.8s.26-75.23,1.47-101.8c1.12-24.56,5.22-37.9,8.67-46.78a78,78,0,0,1,18.85-29,78,78,0,0,1,29-18.85c8.88-3.45,22.22-7.55,46.78-8.67,26.57-1.21,34.53-1.47,101.8-1.47m0-45.39c-68.42,0-77,.29-103.87,1.52S107,11.08,91,17.3A123.68,123.68,0,0,0,46.36,46.36,123.68,123.68,0,0,0,17.3,91c-6.22,16-10.48,34.34-11.7,61.15S4.08,187.58,4.08,256s.29,77,1.52,103.87S11.08,405,17.3,421a123.68,123.68,0,0,0,29.06,44.62A123.52,123.52,0,0,0,91,494.69c16,6.23,34.34,10.49,61.15,11.71s35.45,1.52,103.87,1.52,77-.29,103.87-1.52S405,500.92,421,494.69A128.74,128.74,0,0,0,494.69,421c6.23-16,10.49-34.34,11.71-61.15s1.52-35.45,1.52-103.87-.29-77-1.52-103.87S500.92,107,494.69,91a123.52,123.52,0,0,0-29.05-44.62A123.68,123.68,0,0,0,421,17.3c-16-6.22-34.34-10.48-61.15-11.7S324.42,4.08,256,4.08Z" transform="translate(-4.08 -4.08)"/><path d="M256,126.64A129.36,129.36,0,1,0,385.36,256,129.35,129.35,0,0,0,256,126.64ZM256,340a84,84,0,1,1,84-84A84,84,0,0,1,256,340Z" transform="translate(-4.08 -4.08)"/><circle class="cls-1" cx="386.4" cy="117.44" r="30.23"/></svg>
+							<span>Instaglum</span></a></li>
+						</ul>
+					</div>
+
+					<div class="f-link-box">
+						<div class="f-link-menu">
+							<ul class="f-link">
+								<li><a href="<?php echo esc_url (home_url()); ?>" class="link01">TOP</a></li>
+								<li><a href="<?php echo esc_url (home_url()); ?>/about/" class="link01">ABOUT</a></li>
+								<li><a href="<?php echo esc_url (home_url()); ?>/contact/" class="link01">CONTACT</a></li>
+							</ul>
+
+						</div>
+						<div class="f-link-menu">
+							<ul class="f-link">
+								<li><a href="<?php echo esc_url (home_url()); ?>/list/" class="link01">記事一覧</a>
+									<ul class="c-link">
+										<li><a href="<?php echo esc_url (home_url()); ?>/before/" class="link01">開設前に知っておくこと</a></li>
+										<li><a href="<?php echo esc_url (home_url()); ?>/asp/" class="link01">ASPカートサービスについて</a></li>
+									</ul>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+
+				</div>
+
+			</section>
 		</div>
 		<p class="copy">© 2022 SOUNDLOG.</p>
 	</div>
